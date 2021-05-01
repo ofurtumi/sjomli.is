@@ -1,12 +1,11 @@
 html {
     height: 100%;
     margin: 0;
-    background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5));
-    /* background-position: center center;
-    background-image: url(/myndir/t1.png ); */
+    background-image: linear-gradient(#ee7307, #461a4d);
     display: flex;
     justify-content: center;
     align-items: center;
+    offset: none;
 }
 
 .smetti {
@@ -15,6 +14,33 @@ html {
     align-items: stretch;
 }
 
-.sjomlimg {
-    width: 50%;
+.sjomli_img {
+    width: 40%;
 }
+
+h1 {
+    font-family: permanent-marker, sans-serif;
+    letter-spacing: .1em;
+    font-style: normal;
+}
+
+.shake-rotate-right{
+    display: inherit;
+    transform-origin: center center; }
+  
+  .shake-constant.shake-constant--hover:hover{
+    animation-play-state: paused; }
+  
+  @keyframes shake-rotate {
+    0%, 100% {
+      transform: translate(0, 0) rotate(20deg); }
+    
+    50% {
+      transform: translate(0, 0) rotate(-20deg); }
+    }
+  
+  .shake-rotate.shake-constant {
+    animation-name: shake-rotate;
+    animation-duration: 2500ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite; }
