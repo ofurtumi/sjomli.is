@@ -1,11 +1,21 @@
 html {
     height: 100%;
     margin: 0;
-    background-image: linear-gradient(#ee7307, #461a4d);
     display: flex;
     justify-content: center;
     align-items: center;
-    offset: none;
+    overflow: hidden;
+}
+
+.bakgrunnur {
+  
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  background-image: linear-gradient(#ee7307, #461a4d);
 }
 
 .smetti {
@@ -24,7 +34,7 @@ h1 {
     font-style: normal;
 }
 
-.shake-rotate-right{
+.shake-rotate {
     display: inherit;
     transform-origin: center center; }
   
