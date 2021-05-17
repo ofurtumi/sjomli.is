@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <head>
-    <title>SJOMLI</title>  
-    <link rel="stylesheet" href="https://use.typekit.net/ijt1urz.css">
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="../style.css">
+  <title><?= isset($PageTitle) ? $PageTitle : "Default Title"?></title>
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+<div class="menu" id="header">
+  <ul>
+    <li><a href="/">Heim</a></li>
+    <li><a href="#">Blogg</a></li>
+    <li><a href="/streymi">Streymi</a></li>
+    <li><a href="#">Verkefni</a></li>
+    <li><a href="#">Ferilskrá</a></li>
+  </ul>
+</div>
