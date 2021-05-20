@@ -105,9 +105,10 @@ body {
   letter-spacing: .1em;
   font-style: normal;
   display: block;
-  position: sticky;
+  position: fixed;
   z-index: 30;
   bottom: 0;
+  right: 10px;
   margin: 0;
   float: right;
 }
