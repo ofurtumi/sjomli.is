@@ -20,7 +20,7 @@
 
 		// Ensure that no user is registered twice. 
 		// the email and usernames should be unique
-		$user_check_query = "SELECT * FROM users WHERE username='$username' OR email='$email' LIMIT 1";
+		$user_check_query = "SELECT * FROM `users` WHERE username='$username' OR email='$email' LIMIT 1";
 
 		$result = mysqli_query($conn, $user_check_query);
 		$user = mysqli_fetch_assoc($result);
@@ -45,18 +45,10 @@
 			// put logged in user into session array
 			$_SESSION['user'] = getUserById($reg_user_id);
 
-			// if user is admin, redirect to admin area
-			if ( in_array($_SESSION['user']['role'], ["Admin", "Author"])) {
-				$_SESSION['message'] = "You are now logged in";
-				// redirect to admin area
-				header('location: ' . BASE_URL . 'admin/dashboard.php');
-				exit(0);
-			} else {
-				$_SESSION['message'] = "You are now logged in";
-				// redirect to public area
-				header('location: index.php');				
-				exit(0);
-			}
+			$_SESSION['message'] = "You are now logged in";
+			// redirect to public area
+			header('location: index.php');				
+			exit(0);
 		}
 	}
 
@@ -83,7 +75,7 @@
 				if ( in_array($_SESSION['user']['role'], ["Admin", "Author"])) {
 					$_SESSION['message'] = "Það tókst að skrá þig inn";
 					// redirect to admin area
-					header('location: ' . BASE_URL . '/admin/dashboard.php');
+					header('location: ' . BASE_URL . 'blogg/admin/dashboard.php');
 					exit(0);
 				} else {
 					$_SESSION['message'] = "Það tókst að skrá þig inn";
@@ -102,7 +94,7 @@
 		// bring the global db connect object into function
 		global $conn;
 
-		$val = trim($value); // remove empty space sorrounding string
+		$val = trim($value); // remove empty space surrounding string
 		$val = mysqli_real_escape_string($conn, $value);
 
 		return $val;

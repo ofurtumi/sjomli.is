@@ -3,21 +3,15 @@
 		<span>Halló <?php echo $_SESSION['user']['username'] ?></span>
 		|
 		<span><a href="logout.php">Skrá út</a></span>
+		<br>
+		<?php if ( in_array($_SESSION['user']['role'], ["Admin", "Author"])) { ?>
+				<a href="/blogg/admin/dashboard.php">Admin</a>
+		<?php } ?>
+		
 	</div>
 <?php }else{ ?>
 	<div class="banner">
-			<a href="register.php" class="btn">Skráning!</a>
-
-		<div class="login_div">
-			<form action="<?php echo BASE_URL . 'blogg/index.php'; ?>" method="post" >
-				<h2>Login</h2>
-				<div style="width: 60%; margin: 0px auto;">
-					<?php include('includes/errors.php') ?>
-				</div>
-				<input type="text" name="username" value="<?php echo $username; ?>" placeholder="Username">
-				<input type="password" name="password"  placeholder="Password"> 
-				<button class="btn" type="submit" name="login_btn">Skrá inn</button>
-			</form>
-		</div>
+			<a href="register.php" class="btn">Nýskráning</a>
+			<a href="login.php" class="btn">Skrá inn</a>
 	</div>
 <?php } ?>

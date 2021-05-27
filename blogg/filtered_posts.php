@@ -16,7 +16,7 @@ include("../header.php");
         <hr>
         <?php foreach ($posts as $post): ?>
             <div class="post" style="margin-left: 0px;">
-                <img src="<?php echo BASE_URL . '/static/images/' . $post['image']; ?>" class="post_image" alt="">
+                <img src="<?php echo BASE_URL . 'blogg/static/images/' . $post['image']; ?>" class="post_image" alt="">
                 <div class="post_info">
                     <h3><a href="single_post.php?post-slug=<?php echo $post['slug']; ?>"><?php echo $post['title'] ?></a></h3>
                     <div class="info">

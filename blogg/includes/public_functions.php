@@ -14,6 +14,7 @@ function getPublishedPosts() {
     $final_posts = array();
     foreach ($posts as $post) {
         $post["topic"] = getPostTopic($post["id"]);
+        #array_unshift($final_posts, $post);
         array_push($final_posts, $post);
     }
 

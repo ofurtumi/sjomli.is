@@ -10,7 +10,7 @@ include("../header.php");
 		<form method="post" action="login.php" >
 			<h2>Skráðu þig inn</h2>
 			<?php include(ROOT_PATH . '/includes/errors.php') ?>
-			<input type="text" name="username" value="<?php echo $username; ?>" placeholder="Notendanafn">
+			<input type="text" name="username" value="<?php echo $username; ?>" value="" placeholder="Notendanafn">
 			<input type="password" name="password" placeholder="Lykilorð">
 			<button type="submit" class="btn" name="login_btn">Skrá inn</button>
 			<p>

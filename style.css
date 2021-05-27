@@ -21,6 +21,10 @@ body {
   transition: 0.25s;
 }
 
+.menu {
+    z-index: 100;
+}
+
 .menu ul {
   display: flex;
   justify-content: center;
@@ -76,7 +80,7 @@ body {
 }
 
 .sjomli_img {
-    width: 40%;
+    height: 40%;
 }
 
 .shake-rotate {
