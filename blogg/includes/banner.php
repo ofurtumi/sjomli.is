@@ -11,7 +11,7 @@
 	</div>
 <?php }else{ ?>
 	<div class="banner">
-			<a href="register.php" class="btn">Nýskráning</a>
-			<a href="login.php" class="btn">Skrá inn</a>
+		<a href="register.php"><div class="btn"><h3>Nýskráning</h3></div></a>
+		<a href="login.php"><div class="btn"><h3>Skrá inn</h3></div></a>
 	</div>
 <?php } ?>

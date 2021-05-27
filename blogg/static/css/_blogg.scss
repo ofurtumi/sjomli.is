@@ -1,0 +1,77 @@
+
+
+.banner {
+    // display: flex;
+    // flex-direction: column;
+    grid-row: 2;
+    grid-column: 2;
+    justify-self: center;
+    width: 50%;
+
+    a {
+        text-decoration: none;
+        color: black;
+        margin: .5em;
+        
+    }
+
+    .btn {
+        background: $l1;
+        color: $l5;
+        border: 2px solid $l5;
+        border-radius: 10px;
+        padding: 2px;
+        transition: 0.15s;
+        
+
+        &:hover {
+            color: $l1;
+            background-color: $l5;
+        }
+    }
+
+    h3 {
+        text-align: center;
+        margin-block: 4px;
+        margin-inline: 4px;
+    }
+
+    
+}
+
+.blogg {
+    background-color: $l4;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8fr 1fr, 1fr));
+    grid-column-gap: 20px;
+
+    .content-title {
+        text-align: center;
+    }
+}
+
+.content {
+    grid-row: 2;
+    grid-column: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-column-gap: 20px;
+
+    .post {
+        display: block;
+        background: $l5;
+        border-radius: 12px;
+        margin: 5px;
+
+    }
+    img {
+
+        width: 75%;
+        border: 5px solid $l4;
+        border-radius: 12px;
+        object-fit: cover;
+    }
+}
