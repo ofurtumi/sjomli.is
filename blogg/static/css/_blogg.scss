@@ -141,3 +141,42 @@
     }
 }
     
+.single-post {
+    margin: 3em 25% 0 25%;
+    background: $l5;
+    border: 5px solid $l1;
+    border-radius: 12px;
+    padding: 0 2em;
+    
+    text-align: center;
+    color: $l1;
+}
+
+.single-post-card {
+    margin-top: 3em;
+    margin-right: 3em;
+    background: $l5;
+    border: 5px solid $l1;
+    border-radius: 12px;
+    padding: 0 2em;
+    
+    text-align: center;
+    color: $l1;
+
+    a {
+        background: $l5;
+        padding: 2px;
+        border: 3px solid $l1;
+        border-radius: 7px;
+        font-weight: bold;
+        color: $l1;
+        display: block;
+        margin-bottom: 1em;
+        transition: .15s;
+
+        &:hover {
+            background: $l1;
+            color: $l5;
+        }
+    }
+}
