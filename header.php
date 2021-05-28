@@ -2,7 +2,7 @@
 <head>
   <title><?= isset($PageTitle) ? $PageTitle : "Default Title"?></title>
   <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="/blogg/static/css/blogg-css.css">
+  <link rel="stylesheet" href="/blogg/static/css/main.css">
 <script src="../scroll.js"></script>
 </head>
 <body>
