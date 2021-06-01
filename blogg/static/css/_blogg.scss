@@ -150,6 +150,13 @@
     
     text-align: center;
     color: $l1;
+
+    img {
+        width: 100%;
+        margin-bottom: 2em;
+        border: 5px solid $l1;
+        border-radius: 12px;
+    }
 }
 
 .single-post-card {
