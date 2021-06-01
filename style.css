@@ -7,7 +7,6 @@ html {
 
 body {
   margin-top: 0;
-  padding-bottom: 0;
 }
 
 .menu {
@@ -81,7 +80,7 @@ body {
 }
 
 .sjomli_img {
-    width: 40%;
+    height: 40%;
 }
 
 .shake-rotate {
