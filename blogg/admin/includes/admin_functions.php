@@ -271,5 +271,15 @@ function makeSlug(String $string){
 	$slug = preg_replace('/[^A-Za-z0-9-]+/', '-', $string);
 	return $slug;
 }
+
+//get number of published posts
+function getPostCount() {
+	global $conn;
+	$sql = "SELECT COUNT(*) AS 'total' FROM posts WHERE published = TRUE";
+	$result = mysqli_query($conn, $sql);
+	$count = mysqli_fetch_assoc($result);
+	$count = strval($count['total']);
+	return $count;
+}
 ?>
 
