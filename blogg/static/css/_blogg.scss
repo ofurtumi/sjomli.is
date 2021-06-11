@@ -192,3 +192,21 @@
         display: block;
     }
 }
+
+.scrollbar {
+    overflow-y: scroll;
+    margin-bottom: 10px;
+}
+.main-text {
+    margin: 10px;
+    max-height: 150px;
+    margin-top: 0px;
+}
+  
+::-webkit-scrollbar {
+    width: 2px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: white;
+}

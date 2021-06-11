@@ -22,7 +22,11 @@ include_once("../header.php");
 							<h2 class="post-title">Það er ekki búið að birta þessa færslu</h2>
 						<?php else: ?>
 							<h2><?php echo $post['title']; ?></h2>
-							<?php echo html_entity_decode($post['body']); ?>
+							<div class="scrollbar">
+								<div class="main-text">
+									<?php echo html_entity_decode($post['body']); ?>
+								</div>
+							</div>
 							<img src="<?php echo 'static/images/' . $post['image']; ?>">
 						<?php endif ?>
 						<?php if (isset($post["topic"]["name"])): ?>
