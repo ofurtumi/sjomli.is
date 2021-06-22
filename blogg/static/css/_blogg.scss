@@ -73,7 +73,8 @@
     position: relative;
 
     img {
-        width: 100%;
+        margin: auto;
+        height: 250px;
         margin-bottom: 2em;
         border: 5px solid $l1;
         border-radius: 12px;
@@ -133,8 +134,6 @@
     }
 }
 
-.sidebar-content {
-}
 
 .category-card {
     margin: 0 1em;
@@ -199,7 +198,7 @@
 }
 .main-text {
     margin: 10px;
-    max-height: 150px;
+    max-height: 100px;
     margin-top: 0px;
 }
   

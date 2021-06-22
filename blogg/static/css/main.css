@@ -75,7 +75,8 @@
 }
 
 .single-post img {
-  width: 100%;
+  margin: auto;
+  height: 250px;
   margin-bottom: 2em;
   border: 5px solid #7983a8;
   border-radius: 12px;
@@ -207,7 +208,7 @@
 
 .main-text {
   margin: 10px;
-  max-height: 150px;
+  max-height: 100px;
   margin-top: 0px;
 }
 
