@@ -5,27 +5,21 @@ if (isset($_GET['topic'])) {
     $topic_id = $_GET['topic'];
     $posts = getPublishedPostsByTopic($topic_id);
 }
-$PageTitle = $_GET['topic'];
+$PageTitle = getTopicNameById($topic_id);
 include("../header.php");
 ?>
-<div class="container">
-    <div class="content">
-        <h2 class="content-title">
-            Articles on <u><?php echo getTopicNameById($topic_id); ?></u>
-        </h2>
-        <hr>
-        <?php foreach ($posts as $post): ?>
-            <div class="post" style="margin-left: 0px;">
-                <img src="<?php echo BASE_URL . 'blogg/static/images/' . $post['image']; ?>" class="post_image" alt="">
-                <div class="post_info">
-                    <h3><a href="single_post.php?post-slug=<?php echo $post['slug']; ?>"><?php echo $post['title'] ?></a></h3>
-                    <div class="info">
-                        <span><?php echo date("F j, Y ", strtotime($post["created_at"])); ?></span>
-                        <span class="read_more">Read more...</span>
-                    </div>
-                </div>
+    <h1 class="content-title" style="text-align: center">Færslur um <u><?php echo getTopicNameById($topic_id); ?></u></h1>
+<div class="content">
+    <?php foreach ($posts as $post): ?>
+        <div class="single-post">
+            <h2><?php echo $post['title']; ?></h2>
+            <?php echo html_entity_decode($post['body']); ?>
+            <img src="<?php echo 'static/images/' . $post['image']; ?>">
+
+            <div class="info">
+                <span><?php echo date("j/n/Y ", strtotime($post["created_at"])); ?></span>
             </div>
-        <?php endforeach ?>
-    </div>
+        </div>
+    <?php endforeach ?>
 </div>
 <?php include("../footer.php"); ?>

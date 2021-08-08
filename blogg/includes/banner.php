@@ -1,13 +1,8 @@
 <?php if (isset($_SESSION['user']['username'])) { ?>
-	<div class="logged_in_info">
-		<span>Halló <?php echo $_SESSION['user']['username'] ?></span>
-		|
-		<span><a href="logout.php">Skrá út</a></span>
-		<br>
-		<?php if ( in_array($_SESSION['user']['role'], ["Admin", "Author"])) { ?>
-				<a href="/blogg/admin/dashboard.php">Admin</a>
-		<?php } ?>
-		
+	<div class="banner">
+		<!--<span>Notandi: < ?php echo $_SESSION['user']['username'] ?></span>!-->
+		<a href="logout.php"><div class="btn"><h3>Skrá út</h3></div></a>
+		<a href="/blogg/admin/dashboard.php"><div class="btn"><h3>Stjórnborð</h3></div></a>
 	</div>
 <?php }else{ ?>
 	<div class="banner">

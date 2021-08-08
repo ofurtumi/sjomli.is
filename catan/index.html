@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="catan.css">
+    <title>Catan Calculator</title>
+</head>
+<body>
+    <div class="container" id="wrapper">
+        <div class="card">
+            <img src="img/wheat.png" alt="wheat icon">
+            <p id="wheat">1</p>
+            <button onclick="Minus(wheat)">-</button>
+            <button onclick="Plus(wheat)">+</button>
+        </div>
+        <div class="card">
+            <img src="img/sheep.png" alt="sheep icon">
+            <p id="sheep">0</p>
+            <button onclick="Minus(sheep)">-</button>
+            <button onclick="Plus(sheep)">+</button>
+        </div>
+        <div class="card">
+            <img src="img/stone.png" alt="stone icon">
+            <p id="stone">6</p>
+            <button onclick="Minus(stone)">-</button>
+            <button onclick="Plus(stone)">+</button>
+        </div>
+        <div class="card">
+            <img src="img/wood.png" alt="wood icon">
+            <p id="wood">0</p>
+            <button onclick="Minus(wood)">-</button>
+            <button onclick="Plus(wood)">+</button>
+        </div>
+        <div class="card">
+            <img src="img/clay.png" alt="clay icon">
+            <p id="clay">0</p>
+            <button onclick="Minus(clay)">-</button>
+            <button onclick="Plus(clay)">+</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <p>road</p>
+            <p id="road">0</p>
+        </div>
+        <div class="card">
+            <p>town</p>
+            <p id="town">0</p>
+        </div>
+        <div class="card">
+            <p>city</p>
+            <p id="city">0</p>
+        </div>
+        <div class="card">
+            <p>dev</p>
+            <p id="dev">0</p>
+        </div>
+    </div>
+    <script src="catan.js"></script>
+</body>
+</html>
