@@ -10,7 +10,7 @@
   <ul>
     <li><a href="/">Heim</a></li>
     <li><a href="/blogg">Blogg</a></li>
-    <li><a href="#">Verkefni</a></li>
+    <li><a href="/verkefni/">Verkefni</a></li>
     <!-- <li><a href="#">Ferilskrá</a></li> -->
   </ul>
 </div>

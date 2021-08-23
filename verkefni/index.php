@@ -13,8 +13,11 @@ include_once("../header.php");
     <li>
         <a href="../streymi/">Streymishjálp</a>
     </li>
+    <li>
+        <a href="../bannad/">Æfing í css</a>
+    </li>
 </ul>
 
 <?php
-include_once("footer.php");
+include_once("../footer.php");
 ?>
