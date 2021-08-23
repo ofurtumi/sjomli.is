@@ -11,19 +11,10 @@ include_once("../header.php");
         <a href="augu/">Augu</a>
     </li>
     <li>
-        <a href="SubwayJS/">Subway generator</a>
+        <a href="https://tunfiskur.com/SubwayJS/subway.html">Subway generator</a>
     </li>
     <li>
         <a href="bannad/">Æfing í css</a>
-    </li>
-    <li>
-        <a href="RangerWebGL/">Ranger Leikur</a>
-    </li>
-    <li>
-        <a href="heimsmarkmid/">Sass menu æfing</a>
-    </li>
-    <li>
-        <a href="loftsteinn/">loftsteinn</a>
     </li>
     <li>
         <a href="streymi/">Streymishjálp</a>

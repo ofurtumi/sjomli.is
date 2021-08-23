@@ -21,6 +21,12 @@ function MinArray (array) {
     return Math.min.apply(Math,array)
 }
 
+function SpendResource (resource) {
+  roadArray[0] -= 1;
+  roadArray[1] -= 1;
+  return roadArray;
+}
+
 const wrapper = document.getElementById('wrapper');
 
 wrapper.addEventListener('click', (event) => {
