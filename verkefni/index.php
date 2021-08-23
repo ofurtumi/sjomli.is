@@ -19,6 +19,9 @@ include_once("../header.php");
     <li>
         <a href="streymi/">Streymishjálp</a>
     </li>
+    <li>
+        <a href="../vefforritun/">Verkefni í vefforritun</a>
+    </li>
 </ul>
 
 <?php
