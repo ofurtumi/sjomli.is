@@ -13,7 +13,7 @@
 
 	"Back": {
 		"prefix": "back",
-		"body": ["<a href='../index.html' style=\n\t'position: absolute; \n\tbottom: 15px; \n\tright: 15px; \n\tbackground: white; \n\tborder: 3px solid black; \n\tcolor: black; \n\ttext-decoration: none;' \n\n\tonmouseover=\n\t\t'this.style.backgroundColor=\"#000\"; \n\t\tthis.style.color=\"#fff\";' \n\tonmouseout='\n\t\tthis.style.backgroundColor=\"#fff\"; \n\t\tthis.style.color=\"#000\";'>Menu\n</a>"],	
+		"body": ["<!--back button snippet a la Tumi-->\n<a href='../index.html' style=\n\t'position: absolute; \n\tbottom: 15px; \n\tright: 15px; \n\tbackground: white; \n\tborder: 3px solid black; \n\ttransition: .25s; \n\tborder-radius: 10px; \n\tfont-family: Impact; \n\ttext-align: center; \n\tpadding: 10px; \n\tcolor: black; \n\ttext-decoration: none;' \n\n\tonmouseover=\n\t\t'this.style.backgroundColor=\"#000\"; \n\t\tthis.style.color=\"#fff\";' \n\tonmouseout='\n\t\tthis.style.backgroundColor=\"#fff\"; \n\t\tthis.style.color=\"#000\";'>Menu\n</a>"],	
 		"description": "Ný html síða"
 	},
 

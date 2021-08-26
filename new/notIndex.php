@@ -3,7 +3,7 @@ $PageTitle = 'Ekki gleyma að setja title, asni';
 include_once('toppur.php');
 ?>
 
-<!-- Body kemur hér -->
+<a href="index.php">Vertu blessaður heimur!</a>
 
 <?php
 include_once('ta.php');

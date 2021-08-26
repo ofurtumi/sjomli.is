@@ -1,9 +1,9 @@
 <?php 
-$PageTitle = 'Ekki gleyma að setja title, asni';
+$PageTitle = 'Sjomli.is';
 include_once('toppur.php');
 ?>
 
-Halló heimur!
+<a href="notIndex.php">Halló heimur!</a>
 
 <?php
 include_once('ta.php');

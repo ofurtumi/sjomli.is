@@ -1,0 +1,51 @@
+body {
+    background-image: url(salad.jpg);
+    background-size: cover;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.salatskal {
+    background: rgba(255, 255, 255, 0.5);
+    border: 3px solid black;
+    border-radius: 10px;
+    width: 150px;
+    height: 280px;
+    padding: 10px;
+    margin: 50px auto;
+    margin-bottom: 20px;
+}
+
+.takkaSkal {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    margin: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 24px;
+    font-style: bold;
+    transition: .15s;
+    cursor: pointer;
+}
+
+button:hover {
+    background: rgba(1, 1, 1, 0.5);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+p {
+    margin-top: 0;
+}
+
+button {
+    width: 100px;
+}
