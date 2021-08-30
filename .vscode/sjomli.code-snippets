@@ -7,7 +7,7 @@
 
 	"Basic Html": {
 		"prefix": "base",
-		"body": "<html lang='en'>\n\t<head>\n\t\t<meta charset='UTF-8'>\n\t\t<title>Verkefni 1</title>\n\t\t<style></style>\n\t\t<link rel='stylesheet' href='main.css'>\n\t</head>\n\t<body>\n\n\t\t<!-- Body hér -->\n\n\t</body>\n</html>",	
+		"body": "<html lang='en'>\n\t<head>\n\t\t<meta charset='UTF-8'>\n\t\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\t\t<title>Verkefni 1</title>\n\t\t<style></style>\n\t\t<link rel='stylesheet' href='main.css'>\n\t</head>\n\t<body>\n\n\t\t<!-- Body hér -->\n\n\t</body>\n</html>",	
 		"description": "Ný html síða"
 	},
 
