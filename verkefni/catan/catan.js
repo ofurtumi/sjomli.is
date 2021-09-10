@@ -24,7 +24,7 @@ function MinArray (array) {
 function SpendResource (spending) {
   switch(spending) {
     case "road":
-      if (wood.innerHTML >= 1 && clay.innerHTML >= 1) {
+      if (MinArray(roadArray) >= 1) {
         Minus(wood);
         Minus(clay)
         break;
@@ -32,7 +32,7 @@ function SpendResource (spending) {
       else break;
     
     case "town":
-      if (wheat.innerHTML >= 1 && sheep.innerHTML >= 1 && clay.innerHTML >= 1 && wood.innerHTML >= 1) {
+      if (MinArray(townArray) >= 1) {
         Minus(wheat)
         Minus(sheep)
         Minus(clay)
@@ -42,18 +42,18 @@ function SpendResource (spending) {
       else break;
 
     case "city":
-      if (wood.innerHTML >= 2 && stone.innerHTML >= 3) {
+      if (MinArray(cityArray) >= 1) {
         Minus(wheat);
         Minus(wheat);
-        Minus(stone)
-        Minus(stone)
-        Minus(stone)
+        Minus(stone);
+        Minus(stone);
+        Minus(stone);
         break;
       }
       else break;
 
       case "dev":
-      if (sheep.innerHTML >= 1 && wheat.innerHTML >= 1 && stone.innerHTML >= 1) {
+      if (MinArray(devArray) >= 1) {
         Minus(sheep);
         Minus(wheat)
         Minus(stone)
