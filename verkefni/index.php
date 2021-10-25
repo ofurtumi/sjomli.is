@@ -20,7 +20,10 @@ include_once("../header.php");
         <a href="streymi/">Streymishjálp</a>
     </li>
     <li>
-        <a href="../vefforritun/">Verkefni í vefforritun</a>
+        <a href="https://notendur.hi.is/ttb3">Verkefni í vefforritun</a>
+    </li>
+    <li>
+        <a href="geometry">Það sem form geta?</a>
     </li>
 </ul>
 
