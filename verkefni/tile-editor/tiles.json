@@ -1,0 +1,99 @@
+{
+    "tiles": [
+        {
+            "id": 0,
+            "tile": "himinn",
+            "filename": "himinn.png"
+        },
+        {
+            "id": 1,
+            "tile": "gtv",
+            "filename": "gras-top-v.png"
+        },
+        {
+            "id": 2,
+            "tile": "gtm",
+            "filename": "gras-top-m.png"
+        },
+        {
+            "id": 3,
+            "tile": "gth",
+            "filename": "gras-top-h.png"
+        },
+        {
+            "id": 4,
+            "tile": "gmv",
+            "filename": "gras-mid-v.png"
+        },
+        {
+            "id": 5,
+            "tile": "gmm",
+            "filename": "gras-mid-m.png"
+        },
+        {
+            "id": 6,
+            "tile": "gmh",
+            "filename": "gras-mid-h.png"
+        },
+        {
+            "id": 7,
+            "tile": "gbv",
+            "filename": "gras-botn-v.png"
+        },
+        {
+            "id": 8,
+            "tile": "gbm",
+            "filename": "gras-botn-m.png"
+        },
+        {
+            "id": 9,
+            "tile": "gbh",
+            "filename": "gras-botn-h.png"
+        },
+        {
+            "id": 10,
+            "tile": "stv",
+            "filename": "sky-top-v.png"
+        },
+        {
+            "id": 11,
+            "tile": "stm",
+            "filename": "sky-top-m.png"
+        },
+        {
+            "id": 12,
+            "tile": "sth",
+            "filename": "sky-top-h.png"
+        },
+        {
+            "id": 13,
+            "tile": "smv",
+            "filename": "sky-mid-v.png"
+        },
+        {
+            "id": 14,
+            "tile": "smm",
+            "filename": "sky-mid-m.png"
+        },
+        {
+            "id": 15,
+            "tile": "smh",
+            "filename": "sky-mid-h.png"
+        },
+        {
+            "id": 16,
+            "tile": "sbv",
+            "filename": "sky-botn-v.png"
+        },
+        {
+            "id": 17,
+            "tile": "sbm",
+            "filename": "sky-botn-m.png"
+        },
+        {
+            "id": 18,
+            "tile": "sbh",
+            "filename": "sky-botn-h.png"
+        }
+    ]
+}

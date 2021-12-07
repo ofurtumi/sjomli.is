@@ -1,0 +1,118 @@
+:root {
+    --grid-width: 0;
+    --grid-height: 0;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    /* background-image: url("../../myndir/tileset/himinn.png");
+    background-repeat: repeat; */
+    
+}
+
+#grid {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.row {
+    height: 64px;
+}
+
+.cell {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    border: 1px inset black;
+    background-color: white;
+}
+
+.chooser {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.pallette-row {
+    height: 64px;
+}
+
+.pallette-cell {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    border: 1px inset gray;
+}
+
+.black {
+    background-color: black;
+}
+
+.white {
+    background-color: white;
+}
+
+.tomt {
+    background-image: url(../../myndir/tileset/himinn.png);
+}
+
+.gth {
+    background-image: url(../../myndir/tileset/gras-top-h.png);
+}
+.gtm {
+    background-image: url(../../myndir/tileset/gras-top-m.png);
+}
+.gtv {
+    background-image: url(../../myndir/tileset/gras-top-v.png);
+}
+
+.gmh {
+    background-image: url(../../myndir/tileset/gras-mid-h.png);
+}
+.gmm {
+    background-image: url(../../myndir/tileset/gras-mid-m.png);
+}
+.gmv {
+    background-image: url(../../myndir/tileset/gras-mid-v.png);
+}
+
+.gbh {
+    background-image: url(../../myndir/tileset/gras-botn-h.png);
+}
+.gbm {
+    background-image: url(../../myndir/tileset/gras-botn-m.png);
+}
+.gbv {
+    background-image: url(../../myndir/tileset/gras-botn-v.png);
+}
+.sth {
+    background-image: url(../../myndir/tileset/sky-top-h.png);
+}
+.stm {
+    background-image: url(../../myndir/tileset/sky-top-m.png);
+}
+.stv {
+    background-image: url(../../myndir/tileset/sky-top-v.png);
+}
+
+.smh {
+    background-image: url(../../myndir/tileset/sky-mid-h.png);
+}
+.smm {
+    background-image: url(../../myndir/tileset/sky-mid-m.png);
+}
+.smv {
+    background-image: url(../../myndir/tileset/sky-mid-v.png);
+}
+
+.sbh {
+    background-image: url(../../myndir/tileset/sky-botn-h.png);
+}
+.sbm {
+    background-image: url(../../myndir/tileset/sky-botn-m.png);
+}
+.sbv {
+    background-image: url(../../myndir/tileset/sky-botn-v.png);
+}
