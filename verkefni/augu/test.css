@@ -3,33 +3,21 @@ body{
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.auga {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 150px;
-  height: 150px;
-  box-sizing: border-box;
-  border-radius: 50%;
-  border: 5px solid black;
-  margin: auto;
+  /* position: relative; */
+  /* margin: auto; */
+  background-color: red;
+  
 }
 
 img {
-  transform: scale(.5);
+  width: 50%;
   position: absolute;
-  display: block;
 }
 
-.augasteinn {
-  width: 50px;
-  height: 50px;
-  background: black;
-  border-radius: 50%;
-  margin-right: 5px;
+.andlit {
+  position: absolute;
+}
+
+svg {
+  position: absolute;
 }
