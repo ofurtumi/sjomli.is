@@ -36,13 +36,13 @@ html, body {
 }
 
 .pallette-row {
-    height: 64px;
+    height: 32px;
 }
 
 .pallette-cell {
     display: inline-block;
-    width: 64px;
-    height: 64px;
+    width: 32px;
+    height: 32px;
     border: 1px inset gray;
 }
 
@@ -119,4 +119,8 @@ html, body {
 }
 .sbv {
     background-image: url(../../myndir/tileset/sky-botn-v.png);
+}
+
+@media screen {
+    /*todo gera scaleable allavega smá fyrir síma*/
 }
