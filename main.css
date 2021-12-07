@@ -98,5 +98,49 @@ section {
     margin-bottom: 0.25em;
 }
 
-/* fjarlægja óæskileg elements */
+.myndir {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+}
 
+.myndir p {
+    text-align: center;
+}
+
+.myndir .inputs {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.myndir .inputs legend {
+    display: flex;
+    flex-direction: column;
+}
+
+.myndir #mynd {
+    border: 3px solid black;
+}
+
+@media screen and (min-width: 650px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        padding: 1em;
+    }
+
+    .contact-me {
+        grid-column: span 3;
+        grid-row: 2;
+    }
+
+    .who {
+        grid-column: 2;
+    }
+
+    .myndir {
+        display: flex;
+        grid-row: 1;
+    }
+}
