@@ -1,0 +1,36 @@
+html, body {
+    font-family: monospace;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 1700px;
+}
+
+img {
+    max-width: 100%;
+}
+
+nav ul {
+    width: 100%;
+    padding-inline-start: 0;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid white;
+    transition: ease-in-out .2s;
+}
+
+nav a:hover, nav a:focus-visible {
+    border-bottom: 2px solid black;
+}

@@ -54,6 +54,10 @@ html, body {
     background-color: white;
 }
 
+.valid {
+    filter: brightness(1.55);
+}
+
 .tomt {
     background-image: url(../../myndir/tileset/himinn.png);
 }

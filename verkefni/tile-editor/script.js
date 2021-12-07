@@ -74,7 +74,11 @@ async function palletteCreator() {
         let thisTile = tiles[i*3+j+u*9]["tile"];
         c.classList.add("pallette-cell",thisTile);
         c.addEventListener("click",(e) => {
+          // console.log(brush)
+          // document.querySelector("."+brush).classList.remove("valid");
+          // c.classList.add("valid")
           brush = thisTile;
+          thisTile.classList
         })
         row.appendChild(c)
       }
