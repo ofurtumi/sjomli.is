@@ -5,11 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="twitter:card" content="summary_large_image">
-    </meta>
     <meta name="twitter:creator" content="@tumi_tigur">
     <meta name="twitter:title" content="tilemap editor">
-    <meta name="twitter:description"
-        content="ertu ekki að gefast upp á því að læra? taktu smá pásu og láttu mig vita ef þú finnur ehv bugs">
+    <meta name="twitter:description" content="ertu ekki að gefast upp á því að læra? taktu smá pásu og láttu mig vita ef þú finnur ehv bugs">
     <meta name="twitter:image" content="https://sjomli.is/myndir/tileset/tilsetpreview.png">
     <meta property="og:image" content="https://sjomli.is/myndir/tileset/tilsetpreview.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,10 +16,14 @@
 </head>
 
     <body>
-        <div id="grid"></div>
-        <p>Window width: <span id="width"></span>px, tiles: <span id="wtiles"></span></p>
-        <p>Window height: <span id="height"></span>px, tiles: <span id="htiles"></span></p>
-        <div class="chooser"></div>
+        <main>
+            <div class="chooser"></div>
+            <div id="grid"></div>
+            <legend>
+                grid on/off
+                <input type="checkbox" name="grid" id="gridcheck">
+            </legend>
+        </main>
         <script src="script.js"></script>
     </body>
 

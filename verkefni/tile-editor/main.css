@@ -11,6 +11,12 @@ html, body {
     
 }
 
+main {
+    display: grid;
+    grid-template-columns: 192px 1fr;
+    /* gap: 64px; */
+}
+
 #grid {
     display: flex;
     align-items: center;
@@ -25,14 +31,17 @@ html, body {
     display: inline-block;
     width: 64px;
     height: 64px;
-    border: 1px inset black;
+    box-sizing: border-box;
     background-color: white;
 }
-
+.cell-grid {
+    border: 1px solid gray;
+}
 .chooser {
     display: flex;
-    justify-content: center;
-    gap: 1em;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* gap: 1em; */
 }
 
 .pallette-row {
@@ -43,7 +52,9 @@ html, body {
     display: inline-block;
     width: 32px;
     height: 32px;
-    border: 1px inset gray;
+    box-sizing: border-box;
+    border: 1px solid gray;
+    background-size: cover;
 }
 
 .black {
@@ -121,6 +132,12 @@ html, body {
     background-image: url(../../myndir/tileset/sky-botn-v.png);
 }
 
-@media screen {
-    /*todo gera scaleable allavega smá fyrir síma*/
+@media screen and (min-width: 750px) {
+    .pallette-cell {
+        width: 64px;
+        height: 64px;
+    }
+    .pallette-row {
+        height: 64px;
+    }
 }
