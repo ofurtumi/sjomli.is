@@ -1,34 +1,35 @@
-// window.onload = choosePic;
-
-// var myPix = new Array(
-//     "/myndir/t1.png",
-//     "/myndir/t2.png",
-//     "/myndir/t3.png",
-//     "/myndir/t4.png",
-//     "/myndir/t5.png",
-//     "/myndir/t6.png"
-//     );
-
-// function choosePic() {
-//      var randomNum = Math.floor(Math.random() * myPix.length);
-//      document.getElementById("mynd").src = myPix[randomNum];
-// }
-
 const gleraugu = document.querySelector("#gleraugu");
 const grima = document.querySelector("#grima");
 const mynd = document.querySelector("#mynd");
-
-gleraugu.addEventListener("click",hvadErA);
-grima.addEventListener("click",hvadErA);
+let myndir = [];
+let gr = grima.checked;
+let gl = gleraugu.checked;
 
 function hvadErA() {
-    let gr = grima.checked;
-    let gl = gleraugu.checked;
-
-    if (gr && gl) mynd.setAttribute("src","./myndir/andlit2/gg.jpg");
-    else if (gr) mynd.setAttribute("src","./myndir/andlit2/egg.jpg");
-    else if (gl) mynd.setAttribute("src","./myndir/andlit2/geg.jpg");
-    else mynd.setAttribute("src","./myndir/andlit2/egeg.jpg");
+  if (gr && gl) mynd.setAttribute("src", myndir[0].src);
+  else if (gr) mynd.setAttribute("src", myndir[1].src);
+  else if (gl) mynd.setAttribute("src", myndir[2].src);
+  else mynd.setAttribute("src", myndir[3].src);
 }
 
-hvadErA()
+
+
+async function saekja() {
+    for (let i = 1; i <= 4; i++) {
+        let m = (new Image())
+        m.src = await "./myndir/andlit2/m"+i+".jpg";
+        myndir[i-1] = m;
+    }
+    return
+}
+
+//load that shit
+async function LTS() {
+    saekja().then((e) => {
+        gleraugu.addEventListener("click", hvadErA);
+        grima.addEventListener("click", hvadErA);
+        hvadErA()
+    })
+}
+
+LTS();
