@@ -96,6 +96,9 @@ section {
 .myndir #mynd {
     border: 3px solid black;
     margin-bottom: 0.5em;
+    aspect-ratio: 1/1;
+    background-size: cover;
+    background-image: linear-gradient(blue, red);
 }
 
 .check {
@@ -126,6 +129,20 @@ section {
 
 .check:checked::before {
 	transform: scale(0.95);
+}
+
+.m1 {
+    background-image: url("./myndir/andlit2/m1.jpg") !important;
+    /* width: fit-content; */
+}
+.m2 {
+    background-image: url("./myndir/andlit2/m2.jpg") !important;
+}
+.m3 {
+    background-image: url("./myndir/andlit2/m3.jpg") !important;
+}
+.m4 {
+    background-image: url("./myndir/andlit2/m4.jpg") !important;
 }
 
 @media screen and (min-width: 850px) {

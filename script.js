@@ -1,35 +1,61 @@
 const gleraugu = document.querySelector("#gleraugu");
 const grima = document.querySelector("#grima");
-const mynd = document.querySelector("#mynd");
+let mynd = document.querySelector("#mynd");
+const myndirClass = document.querySelector(".myndir");
 let myndir = [];
-let gr = grima.checked;
-let gl = gleraugu.checked;
+mynd.classList.add("m1")
+
+grima.checked = true;
+gleraugu.checked = true;
 
 function hvadErA() {
-  if (gr && gl) mynd.setAttribute("src", myndir[0].src);
-  else if (gr) mynd.setAttribute("src", myndir[1].src);
-  else if (gl) mynd.setAttribute("src", myndir[2].src);
-  else mynd.setAttribute("src", myndir[3].src);
+    // mynd = document.querySelector("#mynd");
+    let gr = grima.checked;
+    let gl = gleraugu.checked;
+    if (gr && gl) mynd.classList.replace(mynd.classList[0], "m4");
+    else if (gr) mynd.classList.replace(mynd.classList[0], "m2");
+    else if (gl) mynd.classList.replace(mynd.classList[0], "m3");
+    else mynd.classList.replace(mynd.classList[0], "m1");
+    // if (gr && gl) myndirClass.replaceChild(myndir[3], mynd);
+    // else if (gr) myndirClass.replaceChild(myndir[1], mynd);
+    // else if (gl) myndirClass.replaceChild(myndir[2], mynd);
+    // else myndirClass.replaceChild(myndir[0], mynd);
 }
 
-
-
 async function saekja() {
-    for (let i = 1; i <= 4; i++) {
-        let m = (new Image())
-        m.src = await "./myndir/andlit2/m"+i+".jpg";
-        myndir[i-1] = m;
+    try {
+        for (let i = 1; i <= 4; i++) {
+            let m = new Image();
+
+            let o =  await fetch("./myndir/andlit2/m"+i+".jpg")
+            .then((e)=> {
+                m.src = "./myndir/andlit2/m"+i+".jpg"
+            })
+            m.id = "mynd";
+            myndir[i - 1] = m;
+        }
+        
+        return "Tókst að loada";
+    } catch (error) {
+        console.log(error);
     }
-    return
+    return null;
 }
 
 //load that shit
 async function LTS() {
-    saekja().then((e) => {
+    console.log("byrja loada");
+    saekja()
+    .then((e) => {
+        console.log(e);
         gleraugu.addEventListener("click", hvadErA);
         grima.addEventListener("click", hvadErA);
-        hvadErA()
-    })
+        hvadErA();
+    });
 }
+
+window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+});
 
 LTS();
