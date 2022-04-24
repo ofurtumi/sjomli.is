@@ -75,6 +75,10 @@ section {
     padding: 1em;
 }
 
+.myndir img {
+    object-fit: cover;
+}
+
 .myndir p {
     text-align: center;
 }

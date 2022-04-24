@@ -28,7 +28,7 @@ async function saekja() {
             let m = new Image();
 
             let o =  await fetch("./myndir/andlit2/m"+i+".jpg")
-            .then((e)=> {
+            .then(()=> {
                 m.src = "./myndir/andlit2/m"+i+".jpg"
             })
             m.id = "mynd";
