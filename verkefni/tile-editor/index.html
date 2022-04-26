@@ -7,24 +7,41 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:creator" content="@tumi_tigur">
     <meta name="twitter:title" content="tilemap editor">
-    <meta name="twitter:description" content="ertu ekki að gefast upp á því að læra? taktu smá pásu og láttu mig vita ef þú finnur ehv bugs">
+    <meta name="twitter:description"
+        content="ertu ekki að gefast upp á því að læra? taktu smá pásu og láttu mig vita ef þú finnur ehv bugs">
     <meta name="twitter:image" content="https://sjomli.is/myndir/tileset/tilsetpreview.png">
     <meta property="og:image" content="https://sjomli.is/myndir/tileset/tilsetpreview.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="/global-header.css">
     <title>tiles | sjomli.is</title>
 </head>
+<header>
+    <nav>
+        <ul>
+            <li>
+                <a href="/">heim</a>
+            </li>
+            <li>
+                <a href="/verkefni/">verkefni</a>
+            </li>
+            <li>
+                <a href="/ferilskra.pdf" target="blank">ferilskrá</a>
+            </li>
+        </ul>
+    </nav>
+</header>
 
-    <body>
-        <main>
-            <div class="chooser"></div>
-            <div id="grid"></div>
-            <legend>
-                grid on/off
-                <input type="checkbox" name="grid" id="gridcheck">
-            </legend>
-        </main>
-        <script src="script.js"></script>
-    </body>
+<body>
+    <main>
+        <div class="chooser"></div>
+        <div id="grid"></div>
+        <legend>
+            grid on/off
+            <input type="checkbox" name="grid" id="gridcheck">
+        </legend>
+    </main>
+    <script src="script.js"></script>
+</body>
 
 </html>

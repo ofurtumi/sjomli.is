@@ -1,220 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <title>appelsínugula platan</title>
-</head>
-<body>
-    <div class="container">
 
-        <audio id="audio" preload="none" tabindex="0">
-                        <source src="./appelsinugula/01 Jólastund.mp3" data-track-number="1" />
-                        <source src="./appelsinugula/02 Hátíðarskap.mp3" data-track-number="2" />
-                        <source src="./appelsinugula/03 Heima um jólin.mp3" data-track-number="3" />
-                        <source src="./appelsinugula/04 Þorláksmessukvöld.mp3" data-track-number="4" />
-                        <source src="./appelsinugula/05 Ég sá mömmu kyssa.mp3" data-track-number="5" />    
-                        <source src="./appelsinugula/06 Eitt lítið jólalag.mp3" data-track-number="6" />
-                        <source src="./appelsinugula/07 Jólasveinn.mp3" data-track-number="7" />
-                        <source src="./appelsinugula/08 Ljósadýrð.mp3" data-track-number="8" />
-                        <source src="./appelsinugula/09 Jólahjól.mp3" data-track-number="9" />
-                        <source src="./appelsinugula/10 Yfir fannhvíta jörð.mp3" data-track-number="10" />
-                        <source src="./appelsinugula/11 Jólabros í jólaös.mp3" data-track-number="11" />
-                        <source src="./appelsinugula/12 Jólakötturinn.mp3" data-track-number="12" />
-                        <source src="./appelsinugula/13 Jólin eru að koma.mp3" data-track-number="13" />
-                      Your browser does not support HTML5 audio.
-                  </audio>
-      
-        <div class="player">
-      
-          <div class="large-toggle-btn">
-            <i class="large-play-btn"></i>
-          </div>
-          <!-- /.play-box -->
-      
-          <div class="info-box">
-            <div class="track-info-box">
-              <div class="track-title-text"></div>
-              <div class="audio-time">
-                <span class="current-time">00:00</span> /
-                <span class="duration">00:00</span>
-              </div>
-            </div>
-            <!-- /.info-box -->
-      
-            <div class="progress-box">
-              <div class="progress-cell">
-                <div class="progress">
-                  <div class="progress-buffer"></div>
-                  <div class="progress-indicator"></div>
-                </div>
-              </div>
-            </div>
-      
-          </div>
-          <!-- /.progress-box -->
-      
-          <div class="controls-box">
-            <i class="previous-track-btn disabled"><span class="screen-reader-text">Previous track button</span></i>
-            <i class="next-track-btn"><span class="screen-reader-text">Next track button</span></i>
-          </div>
-          <!-- /.controls-box -->
-      
-        </div>
-        <!-- /.player -->
-      
-        <div class="play-list">
-      
-          <div class="play-list-row" data-track-row="1">
-            <div class="small-toggle-btn">
-              <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
-            </div>
-            <div class="track-number">
-              1.
-            </div>
-            <div class="track-title">
-              <a class="playlist-track" href="#" data-play-track="1">Jólastund</a>
-            </div>
-          </div>
-          <div class="play-list-row" data-track-row="2">
-            <div class="small-toggle-btn">
-              <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
-            </div>
-            <div class="track-number">
-              2.
-            </div>
-            <div class="track-title">
-              <a class="playlist-track" href="#" data-play-track="2">Hátíðarskap</a>
-            </div>
-          </div>
-          <div class="play-list-row" data-track-row="3">
-            <div class="small-toggle-btn">
-              <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
-            </div>
-            <div class="track-number">
-              3.
-            </div>
-            <div class="track-title">
-              <a class="playlist-track" href="#" data-play-track="3">Heima um jólin</a>
-            </div>
-          </div>
-          <div class="play-list-row" data-track-row="4">
-            <div class="small-toggle-btn">
-              <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
-            </div>
-            <div class="track-number">
-              4.
-            </div>
-            <div class="track-title">
-              <a class="playlist-track" href="#" data-play-track="4">Þorláksmessukvöld</a>
-            </div>
-          </div>
-          <div class="play-list-row" data-track-row="5">
-            <div class="small-toggle-btn">
-              <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
-            </div>
-            <div class="track-number">
-              5.
-            </div>
-            <div class="track-title">
-              <a class="playlist-track" href="#" data-play-track="5">Ég sá mömmu kyssa jólasvein</a>
-            </div>
-          </div>
-          <div class="play-list-row" data-track-row="6">
-            <div class="small-toggle-btn">
-              <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
-            </div>
-            <div class="track-number">
-              6.
-            </div>
-            <div class="track-title">
-              <a class="playlist-track" href="#" data-play-track="6">Eitt lítið jólalag</a>
-            </div>
-          </div>
-          <div class="play-list-row" data-track-row="7">
-            <div class="small-toggle-btn">
-              <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
-            </div>
-            <div class="track-number">
-              7.
-            </div>
-            <div class="track-title">
-              <a class="playlist-track" href="#" data-play-track="7">Jólasveinn</a>
-            </div>
-          </div>
-          <div class="play-list-row" data-track-row="8">
-            <div class="small-toggle-btn">
-              <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
-            </div>
-            <div class="track-number">
-              8.
-            </div>
-            <div class="track-title">
-              <a class="playlist-track" href="#" data-play-track="8">Ljósadýrð</a>
-            </div>
-          </div>
-          <div class="play-list-row" data-track-row="9">
-            <div class="small-toggle-btn">
-              <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
-            </div>
-            <div class="track-number">
-              9.
-            </div>
-            <div class="track-title">
-              <a class="playlist-track" href="#" data-play-track="9">Jólahjól</a>
-            </div>
-          </div>
-          <div class="play-list-row" data-track-row="10">
-            <div class="small-toggle-btn">
-              <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
-            </div>
-            <div class="track-number">
-              10.
-            </div>
-            <div class="track-title">
-              <a class="playlist-track" href="#" data-play-track="10">Yfir fannhvíta jörð</a>
-            </div>
-          </div>
-          <div class="play-list-row" data-track-row="11">
-            <div class="small-toggle-btn">
-              <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
-            </div>
-            <div class="track-number">
-              11.
-            </div>
-            <div class="track-title">
-              <a class="playlist-track" href="#" data-play-track="11">Jólabros í jólaös</a>
-            </div>
-          </div>
-          <div class="play-list-row" data-track-row="12">
-            <div class="small-toggle-btn">
-              <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
-            </div>
-            <div class="track-number">
-              12.
-            </div>
-            <div class="track-title">
-              <a class="playlist-track" href="#" data-play-track="12">jólakötturinn</a>
-            </div>
-          </div>
-          <div class="play-list-row" data-track-row="13">
-            <div class="small-toggle-btn">
-              <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
-            </div>
-            <div class="track-number">
-              13.
-            </div>
-            <div class="track-title">
-              <a class="playlist-track" href="#" data-play-track="13">jólin er að koma</a>
-            </div>
-          </div>
-      
-        </div>
-      
-        <div>Tónlist af hinni víðsfrægu appelsínugulu plötu </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="../../global-header.css">
+  <title>appelsínugula platan</title>
+</head>
+<header>
+  <nav>
+    <ul>
+      <li>
+        <a href="/">heim</a>
+      </li>
+      <li>
+        <a href="/verkefni/">verkefni</a>
+      </li>
+      <li>
+        <a href="/ferilskra.pdf" target="blank">ferilskrá</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<body>
+  <div class="container">
+
+    <audio id="audio" preload="none" tabindex="0">
+      <source src="./appelsinugula/01 Jólastund.mp3" data-track-number="1" />
+      <source src="./appelsinugula/02 Hátíðarskap.mp3" data-track-number="2" />
+      <source src="./appelsinugula/03 Heima um jólin.mp3" data-track-number="3" />
+      <source src="./appelsinugula/04 Þorláksmessukvöld.mp3" data-track-number="4" />
+      <source src="./appelsinugula/05 Ég sá mömmu kyssa.mp3" data-track-number="5" />
+      <source src="./appelsinugula/06 Eitt lítið jólalag.mp3" data-track-number="6" />
+      <source src="./appelsinugula/07 Jólasveinn.mp3" data-track-number="7" />
+      <source src="./appelsinugula/08 Ljósadýrð.mp3" data-track-number="8" />
+      <source src="./appelsinugula/09 Jólahjól.mp3" data-track-number="9" />
+      <source src="./appelsinugula/10 Yfir fannhvíta jörð.mp3" data-track-number="10" />
+      <source src="./appelsinugula/11 Jólabros í jólaös.mp3" data-track-number="11" />
+      <source src="./appelsinugula/12 Jólakötturinn.mp3" data-track-number="12" />
+      <source src="./appelsinugula/13 Jólin eru að koma.mp3" data-track-number="13" />
+      Your browser does not support HTML5 audio.
+    </audio>
+
+    <div class="player">
+
+      <div class="large-toggle-btn">
+        <i class="large-play-btn"></i>
       </div>
-      <script src="script.js"></script>
+      <!-- /.play-box -->
+
+      <div class="info-box">
+        <div class="track-info-box">
+          <div class="track-title-text"></div>
+          <div class="audio-time">
+            <span class="current-time">00:00</span> /
+            <span class="duration">00:00</span>
+          </div>
+        </div>
+        <!-- /.info-box -->
+
+        <div class="progress-box">
+          <div class="progress-cell">
+            <div class="progress">
+              <div class="progress-buffer"></div>
+              <div class="progress-indicator"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- /.progress-box -->
+
+      <div class="controls-box">
+        <i class="previous-track-btn disabled"><span class="screen-reader-text">Previous track button</span></i>
+        <i class="next-track-btn"><span class="screen-reader-text">Next track button</span></i>
+      </div>
+      <!-- /.controls-box -->
+
+    </div>
+    <!-- /.player -->
+
+    <div class="play-list">
+
+      <div class="play-list-row" data-track-row="1">
+        <div class="small-toggle-btn">
+          <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
+        </div>
+        <div class="track-number">
+          1.
+        </div>
+        <div class="track-title">
+          <a class="playlist-track" href="#" data-play-track="1">Jólastund</a>
+        </div>
+      </div>
+      <div class="play-list-row" data-track-row="2">
+        <div class="small-toggle-btn">
+          <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
+        </div>
+        <div class="track-number">
+          2.
+        </div>
+        <div class="track-title">
+          <a class="playlist-track" href="#" data-play-track="2">Hátíðarskap</a>
+        </div>
+      </div>
+      <div class="play-list-row" data-track-row="3">
+        <div class="small-toggle-btn">
+          <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
+        </div>
+        <div class="track-number">
+          3.
+        </div>
+        <div class="track-title">
+          <a class="playlist-track" href="#" data-play-track="3">Heima um jólin</a>
+        </div>
+      </div>
+      <div class="play-list-row" data-track-row="4">
+        <div class="small-toggle-btn">
+          <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
+        </div>
+        <div class="track-number">
+          4.
+        </div>
+        <div class="track-title">
+          <a class="playlist-track" href="#" data-play-track="4">Þorláksmessukvöld</a>
+        </div>
+      </div>
+      <div class="play-list-row" data-track-row="5">
+        <div class="small-toggle-btn">
+          <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
+        </div>
+        <div class="track-number">
+          5.
+        </div>
+        <div class="track-title">
+          <a class="playlist-track" href="#" data-play-track="5">Ég sá mömmu kyssa jólasvein</a>
+        </div>
+      </div>
+      <div class="play-list-row" data-track-row="6">
+        <div class="small-toggle-btn">
+          <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
+        </div>
+        <div class="track-number">
+          6.
+        </div>
+        <div class="track-title">
+          <a class="playlist-track" href="#" data-play-track="6">Eitt lítið jólalag</a>
+        </div>
+      </div>
+      <div class="play-list-row" data-track-row="7">
+        <div class="small-toggle-btn">
+          <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
+        </div>
+        <div class="track-number">
+          7.
+        </div>
+        <div class="track-title">
+          <a class="playlist-track" href="#" data-play-track="7">Jólasveinn</a>
+        </div>
+      </div>
+      <div class="play-list-row" data-track-row="8">
+        <div class="small-toggle-btn">
+          <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
+        </div>
+        <div class="track-number">
+          8.
+        </div>
+        <div class="track-title">
+          <a class="playlist-track" href="#" data-play-track="8">Ljósadýrð</a>
+        </div>
+      </div>
+      <div class="play-list-row" data-track-row="9">
+        <div class="small-toggle-btn">
+          <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
+        </div>
+        <div class="track-number">
+          9.
+        </div>
+        <div class="track-title">
+          <a class="playlist-track" href="#" data-play-track="9">Jólahjól</a>
+        </div>
+      </div>
+      <div class="play-list-row" data-track-row="10">
+        <div class="small-toggle-btn">
+          <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
+        </div>
+        <div class="track-number">
+          10.
+        </div>
+        <div class="track-title">
+          <a class="playlist-track" href="#" data-play-track="10">Yfir fannhvíta jörð</a>
+        </div>
+      </div>
+      <div class="play-list-row" data-track-row="11">
+        <div class="small-toggle-btn">
+          <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
+        </div>
+        <div class="track-number">
+          11.
+        </div>
+        <div class="track-title">
+          <a class="playlist-track" href="#" data-play-track="11">Jólabros í jólaös</a>
+        </div>
+      </div>
+      <div class="play-list-row" data-track-row="12">
+        <div class="small-toggle-btn">
+          <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
+        </div>
+        <div class="track-number">
+          12.
+        </div>
+        <div class="track-title">
+          <a class="playlist-track" href="#" data-play-track="12">jólakötturinn</a>
+        </div>
+      </div>
+      <div class="play-list-row" data-track-row="13">
+        <div class="small-toggle-btn">
+          <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
+        </div>
+        <div class="track-number">
+          13.
+        </div>
+        <div class="track-title">
+          <a class="playlist-track" href="#" data-play-track="13">jólin er að koma</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div>Tónlist af hinni víðsfrægu appelsínugulu plötu </div>
+  </div>
+  <script src="script.js"></script>
 </body>
+
 </html>
