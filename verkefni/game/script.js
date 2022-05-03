@@ -101,12 +101,11 @@ function animate() {
   c.fillStyle = "#45f";
   c.fillRect(0, 0, canvas.width, canvas.height);
   player.update();
-  if (keys.right && player.vel.x < 20 && !player.RW && player.grounded)
-    player.vel.x += 2;
-  if (keys.left && player.vel.x > -20 && !player.LW && player.grounded)
-    player.vel.x -= 2;
+  if (keys.right && player.vel.x < 10 && !player.RW && player.grounded)
+    player.vel.x = 7;
+  if (keys.left && player.vel.x > -10 && !player.LW && player.grounded)
+    player.vel.x = -7;
   if (keys.up && player.grounded) player.vel.y = -20;
-  // player.nextFrame();
 }
 
 window.addEventListener("keydown", (e) => {
