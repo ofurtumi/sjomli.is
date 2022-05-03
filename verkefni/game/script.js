@@ -2,15 +2,28 @@ const canvas = document.querySelector("#snakeCanvas");
 const c = canvas.getContext("2d");
 const gravity = 1;
 const maxGrav = 15;
-const idles = new Array();
+const slimes = new Array();
 for (let i = 1; i <= 6; i++) {
   const img = new Image(84, 66);
   img.src = "./sprites/i" + i + ".png";
-  idles.push(img);
+  slimes.push(img);
+}
+
+const cowboys = new Array();
+for (let i = 0; i < 9; i++) {
+  const img = new Image(64, 128);
+  img.src = "./sprites/c" + i + ".png";
+  cowboys.push(img);
 }
 
 class Sprite {
-  constructor({ pos, vel, size = { w: 50, h: 50 }, color = "red" }) {
+  constructor({
+    pos,
+    vel,
+    size = { w: 50, h: 50 },
+    color = "red",
+    sprites = slimes,
+  }) {
     this.pos = pos;
     this.size = size;
     this.vel = vel;
@@ -20,18 +33,27 @@ class Sprite {
     this.counter = 1;
     this.state = 0;
     this.moving = false;
+    this.sprites = sprites;
   }
 
   draw() {
     this.counter++;
     if (this.counter % 8 === 0 && this.moving) {
       this.state++;
-      c.drawImage(idles[this.state % 6], this.pos.x, this.pos.y);
+      c.drawImage(
+        this.sprites[this.state % this.sprites.length],
+        this.pos.x,
+        this.pos.y
+      );
     } else if (this.moving) {
-      c.drawImage(idles[this.state % 6], this.pos.x, this.pos.y);
+      c.drawImage(
+        this.sprites[this.state % this.sprites.length],
+        this.pos.x,
+        this.pos.y
+      );
     } else {
-		c.drawImage(idles[0], this.pos.x, this.pos.y)
-	}
+      c.drawImage(this.sprites[0], this.pos.x, this.pos.y);
+    }
     // console.log("this.state --> ", this.state % 6);
   }
 
@@ -87,13 +109,14 @@ const player = new Sprite({
     y: 10,
   },
   size: {
-    w: 84,
-    h: 66,
+    w: 64,
+    h: 128,
   },
   vel: {
     x: 0,
     y: 0,
   },
+  sprites: cowboys,
 });
 
 function animate() {
@@ -102,9 +125,9 @@ function animate() {
   c.fillRect(0, 0, canvas.width, canvas.height);
   player.update();
   if (keys.right && player.vel.x < 10 && !player.RW && player.grounded)
-    player.vel.x = 7;
+    player.vel.x = 5;
   if (keys.left && player.vel.x > -10 && !player.LW && player.grounded)
-    player.vel.x = -7;
+    player.vel.x = -5;
   if (keys.up && player.grounded) player.vel.y = -20;
 }
 
