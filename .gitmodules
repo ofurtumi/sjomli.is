@@ -1,3 +1,6 @@
 [submodule "verkefni/canvas"]
 	path = verkefni/canvas
 	url = https://github.com/ofurtumi/canvas.git
+[submodule "verkefni/IKP"]
+	path = verkefni/IKP
+	url = https://github.com/ofurtumi/inverseKinematicTest.git
