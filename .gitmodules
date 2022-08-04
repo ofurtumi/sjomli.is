@@ -1,0 +1,3 @@
+[submodule "verkefni/canvas"]
+	path = verkefni/canvas
+	url = https://github.com/ofurtumi/canvas.git
