@@ -4,3 +4,6 @@
 [submodule "verkefni/IKP"]
 	path = verkefni/IKP
 	url = https://github.com/ofurtumi/inverseKinematicTest.git
+[submodule "verkefni/dialogue"]
+	path = verkefni/dialogue
+	url = https://github.com/ofurtumi/dialogue.git
