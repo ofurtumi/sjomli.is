@@ -7,3 +7,6 @@
 [submodule "verkefni/dialogue"]
 	path = verkefni/dialogue
 	url = https://github.com/ofurtumi/dialogue.git
+[submodule "verkefni/noise-test"]
+	path = verkefni/noise-test
+	url = https://www.github.com/ofurtumi/noise-test.git
