@@ -1,10 +1,18 @@
+// |||||||||||||||||||||||||||||||||
+// ||    __    sjomli.is    __    ||
+// ||  _/  |_ __ __  _____ |__|   ||
+// ||  \   __\  |  \/     \|  |   ||
+// ||   |  | |  |  /  Y Y  \  |   ||
+// ||   |__| |____/|__|_|__/__|   ||
+// ||                             ||
+// |||||||||||||||||||||||||||||||||
+
 const butt = document.querySelector('#getRes');
 const inp = document.querySelector('#floatIn');
 const output = document.querySelector('#decOut');
 
 getRes.addEventListener('click', (e) => {
 	let whole = inp.value.split('').map((x) => Number(x));
-	// console.log('whole --> ', whole)
 	let works = true;
 	for (const num of whole) {
 		if (num === 1 || num === 0) {
@@ -15,6 +23,8 @@ getRes.addEventListener('click', (e) => {
 		}
 	}
 
+	// * bias reiknaður með stærð 2^(expo í bitum-1)-1
+	// ? fyrir 3ja bita expo er það (2^2)-1 þ.e. maður dregur 3 frá expo
 	if (whole.length == 6 && works) {
 		output.classList.remove('rautt');
 
@@ -27,10 +37,14 @@ getRes.addEventListener('click', (e) => {
 			let minus = whole[0];
 			let expo = whole[1] * 4 + whole[2] * 2 + whole[3] - 3;
 			console.log('expo --> ', expo);
-			let dec =
-				Math.pow(2, expo) +
-				whole[4] * Math.pow(2, expo - 1) +
-				((expo > -3 ? whole[5] : 0) * Math.pow(2, expo - 2));
+			let stable = expo > -3;
+
+			let dec = stable
+				? Math.pow(2, expo) +
+				  whole[4] * Math.pow(2, expo - 1) +
+				  whole[5] * Math.pow(2, expo - 2)
+				: whole[4] * Math.pow(2, expo) +
+				  whole[5] * Math.pow(2, expo - 1);
 			output.textContent = Math.pow(-1, minus) * dec;
 		}
 	} else {

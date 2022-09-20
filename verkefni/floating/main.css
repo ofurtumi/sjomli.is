@@ -35,10 +35,16 @@ body {
 .prison button {
     cursor: pointer;
     grid-column: 2;
+}
+.prison button, .prison input {
     border: 2px solid black;
     box-shadow: 4px 3px #333;
     transform: translate(-3px, -3px);
     transition: ease-in 0.05s;
+}
+
+button:focus, input:focus {
+    outline: none;
 }
 
 .prison button:active {
