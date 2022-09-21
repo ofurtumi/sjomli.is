@@ -11,6 +11,13 @@ const butt = document.querySelector('#getRes');
 const inp = document.querySelector('#floatIn');
 const output = document.querySelector('#decOut');
 
+inp.addEventListener("keypress", (e) => {
+	if(e.key === 'Enter') {
+		console.log('e.key --> ', e.key)
+		getRes.click();
+	}
+})
+
 getRes.addEventListener('click', (e) => {
 	let whole = inp.value.split('').map((x) => Number(x));
 	let works = true;
