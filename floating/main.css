@@ -13,11 +13,13 @@ body {
     font-family: monospace;
     flex: 1;
     /* min-height: 100vh; */
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    place-items: center;
 }
 
 .prison {
+    grid-column: 2;
     max-width: 250px;
     margin: 0 auto;
     display: grid;
@@ -60,4 +62,10 @@ button:focus, input:focus {
     justify-self: center;
     grid-column: span 2;
     grid-row: 2;
+}
+
+.watchtower {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
