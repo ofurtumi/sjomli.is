@@ -15,8 +15,20 @@ const lenInp = document.querySelector('#len');
 const expoInp = document.querySelector('#expo');
 const changer = document.querySelector('#change');
 
+const biasCalc = document.querySelector('#biasCalc');
+const expoCalc = document.querySelector('#expoCalc');
+let bannad = document.querySelector('#bannad');
+
 changer.addEventListener('click', () => {
-	setGlobals(Number(lenInp.value), Number(expoInp.value));
+	let bl = Number(lenInp.value);
+	let el = Number(expoInp.value);
+	
+	if (bl >= 4 && el <= bl -2) {
+		bannad.textContent = ""
+		setGlobals(bl, el);
+	} else {
+		bannad.textContent = "lengd bitastrengs verður að vera 4 >=\nlengd veldisstrengs þarf að vera >= heildarlengd - 2"
+	}
 });
 
 let blen; // ? hver er heildarlengd fleytitölunar
@@ -46,6 +58,10 @@ inp.addEventListener('keypress', (e) => {
 });
 
 getRes.addEventListener('click', (e) => {
+	calculate()
+});
+
+function calculate() {
 	// * útbýr listann whole úr streng og breytir gildum yfir í Number
 	let whole = inp.value.split('').map((x) => Number(x));
 
@@ -90,6 +106,9 @@ getRes.addEventListener('click', (e) => {
 				.reduce((a, b, c) => a + b * Math.pow(2, elen - (c + 1)), 0);
 			expo -= bias;
 
+			biasCalc.textContent = `(2^(${elen}-1))-1 = ${bias}`;
+			expoCalc.textContent = `${expo + bias}-${bias} = ${expo}`;
+
 			let stable = expo > -1 * bias;
 
 			let dec = stable
@@ -108,4 +127,4 @@ getRes.addEventListener('click', (e) => {
 		output.classList.add('rautt');
 		output.textContent = 'tala verður að vera gild ' + blen + ' bita tala';
 	}
-});
+}
