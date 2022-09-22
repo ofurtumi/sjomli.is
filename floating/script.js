@@ -17,7 +17,7 @@ const changer = document.querySelector('#change');
 
 changer.addEventListener('click', () => {
 	setGlobals(Number(lenInp.value), Number(expoInp.value));
-})
+});
 
 let blen; // ? hver er heildarlengd fleytitölunar
 let bias; // ? hver er bias fyrir tölu af stærð blen
@@ -65,7 +65,11 @@ getRes.addEventListener('click', (e) => {
 		// let eCheck = ;
 
 		// ? athugar hvort sé out of bounds eða infinity
-		if (whole.slice(1, 1 + elen).reduce((a, b) => a + b, 0) === bias) {
+		let infTest = whole.slice(1, 1 + elen).reduce((a, b) => a + b, 0);
+		// console.log('infTest --> ', infTest)
+		// console.log('bias --> ', bias)
+		// console.log('elen --> ', elen)
+		if (infTest === elen) {
 			output.textContent = '';
 
 			if (whole[0] === 1) {
