@@ -1,121 +1,140 @@
 .rautt {
-    color: red
+	color: red;
 }
 
 body {
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+	margin: 0;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.city {
+	max-height: 100vh;
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .garden {
-    font-family: monospace;
-    flex: 1;
-    /* min-height: 100vh; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
-    max-width: 350px;
-    margin: 0 auto;
+	font-family: monospace;
+	flex: 1;
+	align-items: center;
+	gap: 5rem;
+	max-width: 350px;
+	height: fit-content;
+	padding: 1rem;
+	margin: 0 auto;
+    
+	border: 2px solid black;
+}
+
+.garden > p {
+	margin: 0;
+	margin-top: 0.5rem;
+	padding-top: 0.5rem;
+	border-top: 2px solid black;
 }
 
 .court {
-    width: 100%;
-    text-align: center; 
-    font-size: 1.5rem;
-    line-height: 0.2rem;
+	width: 100%;
+	text-align: center;
+	font-size: 1.5rem;
+	line-height: 0.2rem;
 }
 
 .court .stort {
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 .court .litid {
-    font-size: 0.8rem;
+	font-size: 0.8rem;
 }
 
 .prison {
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    max-width: 350px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+	max-width: 350px;
+	margin-bottom: 2rem;
 }
 
 .prison input {
-    font-size: 1.2em;
-    max-width: 10rem;
-    grid-column: 1;
-    text-align: center;
+	font-size: 1.2em;
+	max-width: 10rem;
+	grid-column: 1;
+	text-align: center;
 }
 
 button {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 .prison button {
-    grid-column: 2;
+	grid-column: 2;
 }
-button,  input {
-    border: 2px solid black;
-    box-shadow: 4px 3px #333;
-    transform: translate(-3px, -3px);
-    transition: ease-in 0.05s;
-}
-
-button:focus, input:focus {
-    outline: none;
+button,
+input {
+	border: 2px solid black;
+	box-shadow: 4px 3px #333;
+	transform: translate(-3px, -3px);
+	transition: ease-in 0.05s;
 }
 
-button:active,  input:focus{
-    box-shadow: 0px 0px #333;
-    transform: translate(0px, 0px);
+button:focus,
+input:focus {
+	outline: none;
+}
+
+button:active,
+input:focus {
+	box-shadow: 0px 0px #333;
+	transform: translate(0px, 0px);
 }
 
 .prison span {
-    padding-right: 1em;
-    font-size: 1.5em;
-    text-align: center;
-    height: 2em;
-    justify-self: center;
-    grid-column: span 2;
-    grid-row: 2;
+	padding-right: 1em;
+	font-size: 1.5em;
+	text-align: center;
+	height: 2em;
+	justify-self: center;
+	grid-column: span 2;
+	grid-row: 2;
 }
 
 .watchtower {
-    /* margin: 0 auto; */
-    /* display: grid; */
-    display: flex;
-    flex-direction: column;
-    max-width: 100%;
-    gap: 1rem;
+	/* margin: 0 auto; */
+	/* display: grid; */
+	display: flex;
+	flex-direction: column;
+	max-width: 100%;
+	gap: 1rem;
 }
 
 .chair {
-    margin: 0 auto;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
+	margin: 0 auto;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .chair > label {
-    flex: 1;
+	flex: 1;
 }
 
 .chair > input {
-    font-size: 1.2rem;
-    max-width: 50%;
-    flex: 2;
-    text-align: center;
+	font-size: 1.2rem;
+	max-width: 50%;
+	flex: 2;
+	text-align: center;
 }
 
 .watchtower #bannad {
-    color: red;
-    text-align: center;
-    min-height: 2.5em;
+	color: red;
+	text-align: center;
+	min-height: 2.75em;
 }

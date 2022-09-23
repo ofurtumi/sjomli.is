@@ -24,31 +24,35 @@
             </ul>
         </nav>
     </header>
-    <div class="garden">
-        <div class="court">
-            <p class="stort">bias: <span id="biasCalc">(2^(k-1))-1</span></p>
-            <p class="stort">veldi: <span id="expoCalc">exp-b = E</span></p>
-            <p class="litid">*e er gildi veldisstrengsins í decimal</p>
-            <p class="litid">**b er gildi bias reiknað fyrir ofan</p>
-        </div>
-        <div class="prison">
-            <input name="binary" id="floatIn">
-            <button id="getRes">reikna</button>
-            <span id="decOut">hér kemur svar</span>
-        </div>
-        <div class="watchtower">
-            <div class="chair">
-                <label for="n">stærð í bitum</label>
-                <input type="number" name="n" id="len" value="6">  
+    <div class="city">
+        <div class="garden">
+            <div class="court">
+                <p class="stort">bias: <span id="biasCalc">(2^(k-1))-1</span></p>
+                <p class="stort">veldi: <span id="expoCalc">exp-bias = E</span></p>
             </div>
-            <div class="chair">
-                <label for="expo">stærð veldisstrengs</label>
-                <input type="number" name="expo" id="expo" value="3">  
+            <div class="prison">
+                <input name="binary" id="floatIn">
+                <button id="getRes">reikna</button>
+                <span id="decOut">hér kemur svar</span>
             </div>
-            <button id="change">breyta stærð</button>
-            <span id="bannad"></span>
+            <div class="watchtower">
+                <div class="chair">
+                    <label for="n">stærð í bitum</label>
+                    <input type="number" name="n" id="len" value="6" min="4">  
+                </div>
+                <div class="chair">
+                    <label for="expo">stærð veldisstrengs</label>
+                    <input type="number" name="expo" id="expo" value="3" min="1">  
+                </div>
+                <button id="change">breyta stærð</button>
+                <div id="bannad">
+                    <span id="bannad1"></span>
+                    <span id="bannad2"></span>
+                </div>
+            </div>
+            <p>takk Hörður og Hákon fyrir að vera duglegir að láta mig af villum</p>
         </div>
-    </divc>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

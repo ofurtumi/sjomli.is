@@ -17,23 +17,26 @@ const changer = document.querySelector('#change');
 
 const biasCalc = document.querySelector('#biasCalc');
 const expoCalc = document.querySelector('#expoCalc');
-let bannad = document.querySelector('#bannad');
-
-changer.addEventListener('click', () => {
-	let bl = Number(lenInp.value);
-	let el = Number(expoInp.value);
-	
-	if (bl >= 4 && el <= bl -2) {
-		bannad.textContent = ""
-		setGlobals(bl, el);
-	} else {
-		bannad.textContent = "lengd bitastrengs verður að vera 4 >=\nlengd veldisstrengs þarf að vera >= heildarlengd - 2"
-	}
-});
+let bannad1 = document.querySelector('#bannad1');
+let bannad2 = document.querySelector('#bannad2');
 
 let blen; // ? hver er heildarlengd fleytitölunar
 let bias; // ? hver er bias fyrir tölu af stærð blen
 let elen; // ? hver er lengd expo bitastrengsins
+
+changer.addEventListener('click', () => {
+	let bl = Number(lenInp.value);
+	let el = Number(expoInp.value);
+
+	if (bl >= 4 && el <= bl - 2 && el >= 1) {
+		bannad1.textContent = '';
+		bannad2.textContent = '';
+		setGlobals(bl, el);
+	} else {
+		bannad1.textContent = `heildarlengd, n, verður að vera n>=4`;
+		bannad2.textContent = `lengd veldisstrengs, k,  þarf að vera 0>k>=(n-2)`;
+	}
+});
 
 /**
  * fall til þess að auðvelda frumstillingar á breytum
@@ -48,22 +51,27 @@ function setGlobals(bl, el) {
 	elen = el;
 }
 
-setGlobals(6, 3);
+setGlobals(6, 3); // ! frumstilling
+
+document.querySelector('.watchtower').addEventListener('keypress', (e) => {
+	if (e.key === 'Enter') {
+		changer.click();
+	}
+});
 
 inp.addEventListener('keypress', (e) => {
 	if (e.key === 'Enter') {
-		console.log('e.key --> ', e.key);
 		getRes.click();
 	}
 });
 
 getRes.addEventListener('click', (e) => {
-	calculate()
+	calculate();
 });
 
 function calculate() {
 	// * útbýr listann whole úr streng og breytir gildum yfir í Number
-	let whole = inp.value.split('').map((x) => Number(x));
+	let whole = inp.value.split('').map((x) => (x === ' ' ? NaN : Number(x)));
 
 	// * athugar hvort stak í fallinu sé utann 1 eða 0
 	let works = true;
@@ -106,8 +114,12 @@ function calculate() {
 				.reduce((a, b, c) => a + b * Math.pow(2, elen - (c + 1)), 0);
 			expo -= bias;
 
-			biasCalc.textContent = `(2^(${elen}-1))-1 = ${bias}`;
-			expoCalc.textContent = `${expo + bias}-${bias} = ${expo}`;
+			biasCalc.textContent =
+				blen > 32 ? `heill hellingur` : `(2^(${elen}-1))-1 = ${bias}`;
+			expoCalc.textContent =
+				elen > 20
+					? `rosa rosa mikið`
+					: `${expo + bias}-${bias} = ${expo}`;
 
 			let stable = expo > -1 * bias;
 
