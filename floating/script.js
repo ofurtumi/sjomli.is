@@ -25,12 +25,16 @@ let bias; // ? hver er bias fyrir tölu af stærð blen
 let elen; // ? hver er lengd expo bitastrengsins
 
 changer.addEventListener('click', () => {
-	let bl = Number(lenInp.value);
-	let el = Number(expoInp.value);
+	let bl = Math.round(Number(lenInp.value));
+	let el = Math.round(Number(expoInp.value));
 
 	if (bl >= 4 && el <= bl - 2 && el >= 1) {
 		bannad1.textContent = '';
 		bannad2.textContent = '';
+
+		lenInp.value = bl;
+		expoInp.value = el;
+
 		setGlobals(bl, el);
 	} else {
 		bannad1.textContent = `heildarlengd, n, verður að vera n>=4`;
