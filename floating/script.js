@@ -28,7 +28,7 @@ changer.addEventListener('click', () => {
 	let bl = Math.round(Number(lenInp.value));
 	let el = Math.round(Number(expoInp.value));
 
-	if (bl >= 4 && el <= bl - 2 && el >= 1) {
+	if (bl >= 3 && el <= bl - 2 && el >= 1) {
 		bannad1.textContent = '';
 		bannad2.textContent = '';
 
@@ -37,7 +37,7 @@ changer.addEventListener('click', () => {
 
 		setGlobals(bl, el);
 	} else {
-		bannad1.textContent = `heildarlengd, n, verður að vera n>=4`;
+		bannad1.textContent = `heildarlengd, n, verður að vera n>=3`;
 		bannad2.textContent = `lengd veldisstrengs, k,  þarf að vera 0>k>=(n-2)`;
 	}
 });
