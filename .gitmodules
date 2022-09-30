@@ -1,14 +1,14 @@
-[submodule "verkefni/canvas"]
-	path = verkefni/canvas
+[submodule "canvas"]
+	path =canvas
 	url = https://github.com/ofurtumi/canvas.git
 [submodule "verkefni/IKP"]
-	path = verkefni/IKP
+	path =IKP
 	url = https://github.com/ofurtumi/inverseKinematicTest.git
-[submodule "verkefni/dialogue"]
+[submodule "dialogue"]
 	path = verkefni/dialogue
 	url = https://github.com/ofurtumi/dialogue.git
-[submodule "verkefni/noise-test"]
-	path = verkefni/noise-test
+[submodule "noise-test"]
+	path =noise-test
 	url = https://www.github.com/ofurtumi/noise-test.git
 [submodule "floating"]
 	path = fpc
