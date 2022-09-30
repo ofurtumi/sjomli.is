@@ -1,0 +1,12 @@
+[submodule "fpc"]
+	path = fpc
+	url = https://github.com/ofurtumi/fpc.git
+[submodule "canvas"]
+	path = canvas
+	url = https://github.com/ofurtumi/canvas.git
+[submodule "noise-test"]
+	path = noise-test
+	url = https://github.com/ofurtumi/noise-test.git
+[submodule "IKP"]
+	path = IKP
+	url = https://github.com/ofurtumi/IKP.git
