@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+p,
+h1 {
+	margin: 0;
+    padding: 0;
+}
+
+img {
+	max-width: 100%;
+	object-fit: cover;
+    overflow: hidden;
+    border-radius: inherit;
+    scale: 1.005;
+    z-index: -10;
+}
+
+.about {
+    position: relative;
+}
+
+.front {
+	border: 5px solid black;
+    border-radius: 25% 50% 30% 60%;
+	width: 100%;
+	position: relative;
+    display: flex;
+    animation: borders 10s;
+    animation-iteration-count: infinite;
+}
+
+.back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    padding: 4em;
+
+    border-radius: inherit;
+
+    top: 0;
+    background-color: rgba(255, 0, 0, 0.705);
+}

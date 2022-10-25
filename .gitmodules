@@ -10,3 +10,6 @@
 [submodule "IKP"]
 	path = IKP
 	url = https://github.com/ofurtumi/IKP.git
+[submodule "wfc"]
+	path = wfc
+	url = https://github.com/ofurtumi/wave-function-collapse
