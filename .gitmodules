@@ -13,3 +13,6 @@
 [submodule "wfc"]
 	path = wfc
 	url = https://github.com/ofurtumi/wave-function-collapse
+[submodule "raffle"]
+	path = raffle
+	url = https://github.com/ofurtumi/raffle.git
