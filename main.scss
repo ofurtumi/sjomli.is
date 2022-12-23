@@ -53,7 +53,7 @@ header {
 		aspect-ratio: 1/1;
 		padding: $space;
 		background: $c3;
-		color: $t3;
+		color: $t2;
 		border-bottom: $c3 1px solid;
 		border-right: $c3 1px solid;
 		border-top: $c3 1px solid;
@@ -62,10 +62,10 @@ header {
 			border-top 0.4s ease-in-out, border-left 0.5s ease-in-out;
 
 		&:hover {
-			border-bottom: $t3 1px solid;
-			border-right: $t3 1px solid;
-			border-top: $t3 1px solid;
-			border-left: $t3 1px solid;
+			border-bottom: $t2 1px solid;
+			border-right: $t2 1px solid;
+			border-top: $t2 1px solid;
+			border-left: $t2 1px solid;
 		}
 	}
 }
