@@ -16,7 +16,10 @@ $rad: 0px;
 }
 
 html {
+	min-height: 100vh;
+	// background: linear-gradient($c1, $c3);
 	background: $c1;
+	background-size: cover;
 }
 
 img {
@@ -29,10 +32,49 @@ li {
 
 header {
 	margin: $space;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: $space;
+	color: $t3;
+
+	nav {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	button {
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 1.2rem;
+		box-sizing: border-box;
+		border: none;
+		aspect-ratio: 1/1;
+		padding: $space;
+		background: $c3;
+		color: $t3;
+		border-bottom: $c3 1px solid;
+		border-right: $c3 1px solid;
+		border-top: $c3 1px solid;
+		border-left: $c3 1px solid;
+		transition: border-bottom 0.2s ease-in-out, border-right 0.3s ease-in-out,
+			border-top 0.4s ease-in-out, border-left 0.5s ease-in-out;
+
+		&:hover {
+			border-bottom: $t3 1px solid;
+			border-right: $t3 1px solid;
+			border-top: $t3 1px solid;
+			border-left: $t3 1px solid;
+		}
+	}
+}
+
+.hero {
+	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	position: relative;
 
 	img {
 		filter: opacity(0.8);
@@ -50,8 +92,8 @@ header {
 		height: 90%;
 
 		&::before {
-			background-image: linear-gradient(45deg, $c1, $c2);
-			opacity: 75%;
+			background-image: linear-gradient(45deg, $t2, $c2);
+			opacity: 50%;
 			position: absolute;
 			content: '';
 			width: 100%;
@@ -59,17 +101,15 @@ header {
 			z-index: 1;
 		}
 
-		h1 {
+		h1,
+		h2 {
 			text-align: center;
 			font-size: 2rem;
-			color: $t3;
 			z-index: 10;
 		}
 
 		h2 {
 			font-size: 1.5rem;
-			color: $t3;
-			z-index: 10;
 		}
 	}
 }
@@ -81,7 +121,7 @@ section {
 
 	margin: $space;
 	padding: 1.5 * $space 2 * $space;
-	background-color: $c2;
+	background: $c2;
 	border-radius: $rad;
 
 	h1 {
