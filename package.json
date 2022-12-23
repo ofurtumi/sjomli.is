@@ -1,0 +1,26 @@
+{
+  "name": "sjomli.is",
+  "version": "1.0.0",
+  "description": "look, rendering osfr",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "sass": "sass main.scss main.css",
+    "watch": "sass --watch main.scss main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ofurtumi/sjomli.is.git"
+  },
+  "author": "tumi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ofurtumi/sjomli.is/issues"
+  },
+  "homepage": "https://github.com/ofurtumi/sjomli.is#readme",
+  "dependencies": {
+    "sass": "^1.57.1"
+  }
+}
