@@ -20,6 +20,17 @@ html {
 	// background: linear-gradient($c1, $c3);
 	background: $c1;
 	background-size: cover;
+	scroll-behavior: smooth;
+}
+
+body {
+	// overflow: hidden;
+}
+
+main {
+	overflow: scroll;
+	height: 100vh;
+	scroll-snap-type: y mandatory;
 }
 
 img {
@@ -31,9 +42,12 @@ li {
 }
 
 header {
-	margin: $space;
-	display: grid;
-	grid-template-columns: 1fr;
+	height: 100vh;
+	margin: 0 $space;
+	display: flex;
+	// grid-template-columns: 1fr;
+	flex-direction: column;
+	justify-content: space-around;
 	gap: $space;
 	color: $t3;
 
@@ -58,8 +72,9 @@ header {
 		border-right: $c3 1px solid;
 		border-top: $c3 1px solid;
 		border-left: $c3 1px solid;
-		transition: border-bottom 0.2s ease-in-out, border-right 0.3s ease-in-out,
-			border-top 0.4s ease-in-out, border-left 0.5s ease-in-out;
+		transition: border-bottom 0.2s ease-in-out,
+			border-right 0.3s ease-in-out, border-top 0.4s ease-in-out,
+			border-left 0.5s ease-in-out;
 
 		&:hover {
 			border-bottom: $t2 1px solid;
@@ -68,72 +83,71 @@ header {
 			border-left: $t2 1px solid;
 		}
 	}
-}
 
-.hero {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	img {
-		filter: opacity(0.8);
-		border-radius: $rad;
-	}
-
-	div {
+	.hero {
+		position: relative;
 		display: flex;
 		justify-content: center;
-		flex-direction: column;
 		align-items: center;
-		gap: 2 * $space;
-		position: absolute;
-		width: 95%;
-		height: 90%;
 
-		&::before {
-			background-image: linear-gradient(45deg, $t2, $c2);
-			opacity: 50%;
+		img {
+			filter: opacity(0.8);
+			border-radius: $rad;
+		}
+
+		div {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+			gap: 2 * $space;
 			position: absolute;
-			content: '';
-			width: 100%;
-			height: 100%;
-			z-index: 1;
-		}
+			width: 95%;
+			height: 90%;
 
-		h1,
-		h2 {
-			text-align: center;
-			font-size: 2rem;
-			z-index: 10;
-		}
+			&::before {
+				background-image: linear-gradient(45deg, $t2, $c2);
+				opacity: 50%;
+				position: absolute;
+				content: '';
+				width: 100%;
+				height: 100%;
+				z-index: 1;
+			}
 
-		h2 {
-			font-size: 1.5rem;
+			h1,
+			h2 {
+				text-align: center;
+				font-size: 2rem;
+				z-index: 10;
+			}
+
+			h2 {
+				font-size: 1.5rem;
+			}
 		}
 	}
-}
 
-section {
-	* {
-		color: $t2;
-	}
+	.overview {
+		* {
+			color: $t2;
+		}
 
-	margin: $space;
-	padding: 1.5 * $space 2 * $space;
-	background: $c2;
-	border-radius: $rad;
+		padding: 1.5 * $space 2 * $space;
+		background: $c2;
+		border-radius: $rad;
 
-	h1 {
-		margin: 0.5 * $space 0;
-		font-size: 1.2rem;
-		border-bottom: 2px solid;
-	}
+		h1 {
+			margin: 0.5 * $space 0;
+			font-size: 1.2rem;
+			border-bottom: 2px solid;
+		}
 
-	ul {
-		display: flex;
-		flex-direction: column;
-		gap: 0.2 * $space;
+		ul {
+			display: flex;
+			flex-direction: column;
+			gap: 0.2 * $space;
+		}
 	}
 }
 
@@ -146,4 +160,23 @@ section {
 
 .fancy_link:hover {
 	box-shadow: inset 400px 0 0 0 $c3;
+}
+
+section {
+	position: relative;
+	scroll-snap-align: start;
+	display: grid;
+	height: 100vh;
+	// margin: $space;
+	// padding: $space;
+	background-color: $c2;
+
+	transition: opacity 2s;
+	&.hidden {
+		opacity: 0;
+	}
+
+	&.shown {
+		opacity: 1;
+	}
 }
