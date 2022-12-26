@@ -13,24 +13,21 @@ $rad: 0px;
 	padding: 0;
 	text-decoration: none;
 	font-size: 16px;
+	box-sizing: border-box;
 }
 
 html {
-	min-height: 100vh;
 	// background: linear-gradient($c1, $c3);
 	background: $c1;
 	background-size: cover;
-	scroll-behavior: smooth;
+	overflow: hidden;
 }
 
 body {
-	// overflow: hidden;
-}
-
-main {
 	overflow: scroll;
 	height: 100vh;
 	scroll-snap-type: y mandatory;
+	scroll-behavior: smooth;
 }
 
 img {
@@ -42,10 +39,10 @@ li {
 }
 
 header {
+	scroll-snap-align: start;
 	height: 100vh;
 	margin: 0 $space;
 	display: flex;
-	// grid-template-columns: 1fr;
 	flex-direction: column;
 	justify-content: space-around;
 	gap: $space;
@@ -162,21 +159,41 @@ header {
 	box-shadow: inset 400px 0 0 0 $c3;
 }
 
-section {
+.proj {
+	overflow: hidden;
 	position: relative;
 	scroll-snap-align: start;
-	display: grid;
 	height: 100vh;
-	// margin: $space;
-	// padding: $space;
-	background-color: $c2;
-
+	padding: $space;
 	transition: opacity 2s;
-	&.hidden {
-		opacity: 0;
-	}
 
-	&.shown {
-		opacity: 1;
+	.content {
+		width: 100%;
+		height: 100%;
+		background-color: $c3;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		h2 {
+			font-size: 2rem;
+		}
+	}
+}
+
+.hidden {
+	opacity: 0;
+	transition: opacity 0.2s linear;
+	* {
+		transform: translateX(-1000%);
+		transition: transform 0.3s ease-in-out 0.2s;
+	}
+}
+
+.shown {
+	opacity: 1;
+	* {
+		transform: translateX(0%);
 	}
 }
