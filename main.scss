@@ -39,9 +39,10 @@ li {
 }
 
 header {
-	scroll-snap-align: start;
+	scroll-snap-align: center;
 	height: 100vh;
-	margin: 0 $space;
+	// margin: 0 $space;
+	// background-color: $c3;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -51,6 +52,7 @@ header {
 	nav {
 		display: flex;
 		justify-content: space-between;
+		margin: $space $space 0 $space;
 	}
 
 	button {
@@ -97,18 +99,20 @@ header {
 			justify-content: center;
 			flex-direction: column;
 			align-items: center;
-			gap: 2 * $space;
+			// gap: 2 * $space;
 			position: absolute;
-			width: 95%;
-			height: 90%;
+			width: 100%;
+			height: 100%;
+			padding: $space;
 
-			&::before {
+			&:before {
 				background-image: linear-gradient(45deg, $t2, $c2);
 				opacity: 50%;
 				position: absolute;
 				content: '';
-				width: 100%;
-				height: 100%;
+				inset: $space;
+				// width: 100%;
+				// height: 100%;
 				z-index: 1;
 			}
 
@@ -148,52 +152,107 @@ header {
 	}
 }
 
-.fancy_link {
+.fancy-link {
 	padding: 0.2 * $space;
 	background-color: inherit;
-	box-shadow: inset 0 0 0 0 $c3;
+	box-shadow: inset 0 0 0 0 $c1;
 	transition: box-shadow ease-out 0.4s;
 }
 
-.fancy_link:hover {
-	box-shadow: inset 400px 0 0 0 $c3;
+.fancy-link:hover {
+	box-shadow: inset 400px 0 0 0 $c1;
 }
 
 .proj {
 	overflow: hidden;
 	position: relative;
-	scroll-snap-align: start;
+	scroll-snap-align: center;
 	height: 100vh;
 	padding: $space;
 	transition: opacity 2s;
+	display: flex;
+	flex-direction: column;
 
 	.content {
-		width: 100%;
-		height: 100%;
-		background-color: $c3;
-
 		display: flex;
-		justify-content: center;
-		align-items: center;
+		flex-direction: column;
+		overflow: hidden;
+		gap: $space;
+		width: 100%;
+		aspect-ratio: 1/1;
+		background-color: $c3;
+		padding: $space;
 
-		h2 {
-			font-size: 2rem;
+		color: $t3;
+
+		.project-name {
+			font-size: 2 * $space;
+			transition-delay: 0.05s;
 		}
+
+		.description {
+			font-size: $space;
+			transition-delay: 0.20s;
+		}
+
+		.fancy-link {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-grow: 1;
+			font-size: 2 * $space;
+			background-color: $c2;
+			color: $t2;
+			padding: 0;
+			transition: box-shadow ease-out 0.4s, transform 0.5s ease-in 0.35s;
+		}
+
+		.foot {
+			flex-grow: 1;
+			display: flex;
+			align-items: flex-end;
+			justify-content: space-between;
+			transition-delay: 0.5s;
+
+			p, a {
+				font-size: 0.8 * $space;
+				color: $t3;
+			}
+
+			a {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.info {
+		display: flex;
+		flex-grow: 1;
+		margin-top: $space;
+		background-color: $c2;
 	}
 }
 
 .hidden {
 	opacity: 0;
-	transition: opacity 0.2s linear;
-	* {
-		transform: translateX(-1000%);
-		transition: transform 0.3s ease-in-out 0.2s;
+	filter: blur(5px);
+	transition: filter 0.2s ease-in, opacity 0.4s linear;
+	.float-left {
+		transform: translateX(-150%);
+		transition: transform 0.5s ease-in;
+	}
+
+	.float-right {
+		transform: translateX(150%);
+		transition: transform 0.5s ease-in;
 	}
 }
 
 .shown {
 	opacity: 1;
-	* {
+	filter: blur(0);
+	.float-left,
+	.float-right {
 		transform: translateX(0%);
 	}
 }
