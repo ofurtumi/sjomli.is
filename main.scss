@@ -208,7 +208,7 @@ header {
 
 		.project-name {
 			font-size: 2 * $space;
-			transition-delay: 0.05s;
+			transition-delay: 0.1s;
 		}
 
 		.description {
@@ -226,7 +226,7 @@ header {
 			color: $t2;
 			padding: 0;
 			transition: background-position ease-out 0.4s,
-				transform 0.5s ease-in 0.35s;
+				transform 0.5s ease-in 0.3s;
 		}
 
 		.foot {
@@ -234,7 +234,7 @@ header {
 			display: flex;
 			align-items: flex-end;
 			justify-content: space-between;
-			transition-delay: 0.5s;
+			transition-delay: 0.4s;
 
 			p,
 			a {
@@ -249,6 +249,7 @@ header {
 	}
 
 	.info {
+		overflow: hidden;
 		padding: $space;
 		flex-grow: 1;
 		display: grid;
@@ -259,7 +260,14 @@ header {
 		align-content: flex-start;
 		justify-items: center;
 		color: $t3;
-				
+		.stack-title {
+			width: 100%;
+			text-align: center;
+			transition-delay: 0.5s;
+		}
+		.stack-list {
+			transition-delay: 0.6s;
+		}
 		.stack-list, .rand-list {
 			width: 100%;
 			display: flex;
@@ -274,12 +282,20 @@ header {
 		}
 
 		
+		.difficulty-title {
+			width: 100%;
+			text-align: center;
+			transition-delay: 0.5s;
+		}
+		
 		.difficulty {
 			grid-column: 1;
 			grid-row: 2;
+			transition-delay: 0.6s;
 		}
 
 		.random {
+			transition-delay: 0.7s;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -290,6 +306,7 @@ header {
 		}
 
 		.percentage {
+			width: 100%;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -297,7 +314,7 @@ header {
 
 			.round {
 				transform: rotate(-90deg);
-				transition: all 1s ease-in-out;
+				transition: all 1s ease-in-out 0.8s;
 
 				/* SVG */
 				fill: $c3;
@@ -324,13 +341,18 @@ header {
 	opacity: 0;
 	filter: blur(5px);
 	transition: filter 0.2s ease-in, opacity 0.4s linear;
-	.float-left {
+	.float-right {
 		transform: translateX(-150%);
 		transition: transform 0.5s ease-in;
 	}
 
-	.float-right {
+	.float-left {
 		transform: translateX(150%);
+		transition: transform 0.5s ease-in;
+	}
+
+	.float-up {
+		transform: translateY(150%);
 		transition: transform 0.5s ease-in;
 	}
 }
@@ -339,7 +361,9 @@ header {
 	opacity: 1;
 	filter: blur(0);
 	.float-left,
-	.float-right {
+	.float-right,
+	.float-up {
 		transform: translateX(0%);
+		transform: translateY(0%);
 	}
 }
