@@ -52,7 +52,7 @@
         </div>
     </header>
     <main>
-        <section id="bannad" class="proj">
+        <!-- <section id="bannad" class="proj">
             <div class="content hidden">
                 <h2 class="project-name float-right">ökuskírteini</h2>
                 <p class="description float-left">endurgerð á rafrænu íslensku ökuskírteini, upphaflega gert til að æfa
@@ -67,10 +67,10 @@
             <div class="info hidden">
                 <h3 class="difficulty-title float-right">erfiðleiki</h3>
                 <div class="float-right difficulty percentage">
-                    <svg class="round" width="100" height="100" data-percent="30">
+                    <svg class="round" width="100" height="100" data-percent="35">
                         <circle cx="50" cy="50" r="40" />
                     </svg>
-                    <span class="per-num">asdf</span>
+                    <span class="per-num"></span>
                 </div>
                 <h3 class="stack-title float-left">stack</h3>
                 <ul class="stack-list float-left">
@@ -80,7 +80,6 @@
                 <div class="random float-up">
                     <h3>athugaverðar tölur</h3>
                     <ul class="rand-list">
-                        
                         <li><span>CSS level</span><span>+1</span></li>
                         <li><span>HTML level</span><span>---</span></li>
                         <li><span>tími</span><span>1.5 klst</span></li>
@@ -88,8 +87,42 @@
                     </ul>
                 </div>
             </div>
-        </section>
+        </section> -->
+        <template id="project-template">
+            <section id="bannad" class="proj">
+                <div class="content hidden">
+                    <h2 id="project-name" class="project-name float-right"></h2>
+                    <p id="project-description" class="description float-left"></p>
+                    <a id="project-link" href="/bannad" class="fancy-link float-right">opna verkefni</a>
+                    <div class="foot float-left">
+                        <p id="project-date">apríl 2020</p>
+                        <a id="project-github">github</a>
+                    </div>
+                </div>
+                <div class="info hidden">
+                    <h3 class="difficulty-title float-right">erfiðleiki</h3>
+                    <div class="float-right difficulty percentage">
+                        <svg id="project-percent" class="round" width="100" height="100">
+                            <circle cx="50" cy="50" r="40" />
+                        </svg>
+                        <span id="project-num" class="per-num"></span>
+                    </div>
+                    <h3 class="stack-title float-left">stack</h3>
+                    <ul class="stack-list float-left">
+                    </ul>
+                    <div class="random float-up">
+                        <h3>athugaverðar tölur</h3>
+                        <ul class="rand-list">
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <template id="list-item">
+            <li><span>CSS</span><span>75%</span></li>
+        </template>
     </main>
+    <script src="setup.js"></script>
 </body>
 
 </html>
