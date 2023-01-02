@@ -9,7 +9,7 @@ const data = [
 		diffPercent: 35,
 		stack: [
 			{ title: 'CSS', value: "75%" },
-			{ title: 'HTML', value: "35%" },
+			{ title: 'HTML', value: "25%" },
 		],
 		filler: [
 			{ title: 'CSS level', value: '+1' },
