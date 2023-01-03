@@ -8,367 +8,483 @@ $space: 1rem;
 $rad: 0px;
 
 * {
-	font-family: monospace;
-	margin: 0;
-	padding: 0;
-	text-decoration: none;
-	font-size: 16px;
-	box-sizing: border-box;
+  font-family: monospace;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-size: 16px;
+  box-sizing: border-box;
 }
 
 html {
-	background: $c1;
-	background-size: cover;
-	overflow: hidden;
+  background: $c1;
+  background-size: cover;
+  overflow: hidden;
 }
 
 body {
-	overflow: scroll;
-	height: 100vh;
-	scroll-snap-type: y mandatory;
-	scroll-behavior: smooth;
+  overflow: scroll;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 img {
-	max-width: 100%;
+  max-width: 100%;
 }
 
 li {
-	list-style: none;
+  list-style: none;
 }
 
 header {
-	scroll-snap-align: center;
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	gap: $space;
-	color: $t3;
+  scroll-snap-align: center;
+  // height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: $space;
+  color: $t3;
 
-	nav {
-		display: flex;
-		justify-content: space-between;
-		margin: $space $space 0 $space;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    margin: $space $space 0 $space;
 
-		button {
-			cursor: pointer;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			font-size: 1.2rem;
-			box-sizing: border-box;
-			border: none;
-			aspect-ratio: 1/1;
-			padding: $space;
-			background: $c3;
-			color: $t2;
-			border-bottom: $c3 1px solid;
-			border-right: $c3 1px solid;
-			border-top: $c3 1px solid;
-			border-left: $c3 1px solid;
-			transition: border-bottom 0.2s ease-in-out,
-				border-right 0.3s ease-in-out, border-top 0.4s ease-in-out,
-				border-left 0.5s ease-in-out;
+    button {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+      box-sizing: border-box;
+      border: none;
+      aspect-ratio: 1/1;
+      padding: $space;
+      background: $c3;
+      color: $t2;
+      border-bottom: $c3 1px solid;
+      border-right: $c3 1px solid;
+      border-top: $c3 1px solid;
+      border-left: $c3 1px solid;
+      transition: border-bottom 0.2s ease-in-out, border-right 0.3s ease-in-out,
+        border-top 0.4s ease-in-out, border-left 0.5s ease-in-out;
 
-			&:hover {
-				border-bottom: $t2 1px solid;
-				border-right: $t2 1px solid;
-				border-top: $t2 1px solid;
-				border-left: $t2 1px solid;
-			}
-		}
-	}
+      &:hover {
+        border-bottom: $t2 1px solid;
+        border-right: $t2 1px solid;
+        border-top: $t2 1px solid;
+        border-left: $t2 1px solid;
+      }
+    }
+  }
 
-	.hero {
-		position: relative;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+  .hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-		img {
-			filter: opacity(0.8);
-			border-radius: $rad;
-		}
+    img {
+      filter: opacity(0.8);
+      border-radius: $rad;
+    }
 
-		div {
-			display: flex;
-			justify-content: center;
-			flex-direction: column;
-			align-items: center;
-			// gap: 2 * $space;
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			padding: $space;
+    div {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      // gap: 2 * $space;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      padding: $space;
 
-			&:before {
-				background-image: linear-gradient(45deg, $t2, $c2);
-				opacity: 50%;
-				position: absolute;
-				content: '';
-				inset: $space;
-				z-index: 1;
-			}
+      &:before {
+        background: $c2;
+        opacity: 75%;
+        position: absolute;
+        content: "";
+        inset: $space;
+        z-index: 1;
+      }
 
-			h1,
-			h2 {
-				text-align: center;
-				font-size: 2rem;
-				z-index: 10;
-			}
+      h1,
+      h2 {
+        text-align: center;
+        font-size: 2rem;
+        z-index: 10;
+      }
 
-			h2 {
-				font-size: 1.5rem;
-			}
-		}
-	}
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+.overview {
+  * {
+    color: $t2;
+  }
 
-	.overview {
-		* {
-			color: $t2;
-		}
+  margin: $space;
+  padding: $space;
+  background: $c2;
+  border-radius: $rad;
 
-		margin: $space;
-		padding: $space;
-		background: $c2;
-		border-radius: $rad;
+  h1 {
+    margin: 0.5 * $space 0;
+    font-size: 1.2rem;
+    border-bottom: 2px solid;
+  }
 
-		h1 {
-			margin: 0.5 * $space 0;
-			font-size: 1.2rem;
-			border-bottom: 2px solid;
-		}
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2 * $space;
+  }
+}
 
-		ul {
-			display: flex;
-			flex-direction: column;
-			gap: 0.2 * $space;
-		}
-	}
+.arrows {
+  display: flex;
+  justify-content: center;
 
-	.arrows {
-		display: flex;
-		justify-content: center;
+  svg {
+    cursor: pointer;
+    stroke: $c3;
+    transition: 0.2s;
 
-		svg {
-			cursor: pointer;
-			stroke: $c3;
-			transition: 0.2s;
+    &:hover {
+      path {
+        transform: translateY(0.5 * $space);
+      }
+    }
+  }
+  path {
+    transition: 0.2s ease-in-out;
+  }
 
-			&:hover {
-				path {
-					transform: translateY(0.5 * $space);
-				}
-			}
-		}
-		path {
-			transition: 0.2s ease-in-out;
-		}
-
-		path:nth-child(2) {
-			transition-delay: 0.1s;
-		}
-	}
+  path:nth-child(2) {
+    transition-delay: 0.1s;
+  }
 }
 
 .fancy-link {
-	padding: 0.2 * $space;
-	background-image: linear-gradient(90deg, $c1, $c1 50%, #00000000 0);
-	background-size: 300%;
-	background-position: 100%;
-	transition: background-position 0.6s ease-out;
+  padding: 0.2 * $space;
+
+  &.dark-bg {
+    background-image: linear-gradient(90deg, $c1, $c1 50%, #00000000 0);
+  }
+
+  background-image: linear-gradient(90deg, $c3, $c3 50%, #00000000 0);
+
+  background-size: 300%;
+  background-position: 100%;
+  transition: background-position 0.6s ease-out;
 }
 
 .fancy-link:hover {
-	background-position: 0%;
+  background-position: 0%;
 }
 
 .proj {
-	overflow: hidden;
-	position: relative;
-	scroll-snap-align: center;
-	height: 100vh;
-	padding: $space;
-	transition: opacity 2s;
-	display: flex;
-	flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  scroll-snap-align: center;
+  height: 100vh;
+  padding: $space;
+  transition: opacity 2s;
+  display: flex;
+  flex-direction: column;
 
-	.content {
-		display: flex;
-		flex-direction: column;
-		overflow: hidden;
-		gap: $space;
-		width: 100%;
-		aspect-ratio: 1/1;
-		background-color: $c3;
-		padding: $space;
+  .content {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    gap: $space;
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-color: $c3;
+    padding: $space;
 
-		color: $t3;
+    color: $t3;
 
-		.project-name {
-			font-size: 2 * $space;
-			transition-delay: 0.1s;
-		}
+    .project-name {
+      font-size: 2 * $space;
+      transition-delay: 0.1s;
+    }
 
-		.description {
-			font-size: $space;
-			transition-delay: 0.2s;
-		}
+    .description {
+      font-size: $space;
+      transition-delay: 0.2s;
+    }
 
-		.fancy-link {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-grow: 1;
-			font-size: 2 * $space;
-			background-color: $c2;
-			color: $t2;
-			padding: 0;
-			transition: background-position ease-out 0.4s,
-				transform 0.5s ease-in 0.3s;
-		}
+    .fancy-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+      font-size: 2 * $space;
+      background-color: $c2;
+      color: $t2;
+      padding: 0;
+      transition: background-position ease-out 0.4s, transform 0.5s ease-in 0.3s;
+    }
 
-		.foot {
-			flex-grow: 1;
-			display: flex;
-			align-items: flex-end;
-			justify-content: space-between;
-			transition-delay: 0.4s;
+    .foot {
+      flex-grow: 1;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      transition-delay: 0.4s;
 
-			p,
-			a {
-				font-size: 0.8 * $space;
-				color: $t3;
-			}
+      p,
+      a {
+        font-size: 0.8 * $space;
+        color: $t3;
+      }
 
-			a {
-				text-decoration: underline;
-			}
-		}
-	}
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
 
-	.info {
-		overflow: hidden;
-		padding: $space;
-		flex-grow: 1;
-		display: grid;
-		gap: $space;
-		margin-top: $space;
-		background-color: $c2;
-		grid-template-columns: 1fr 1fr;
-		align-content: flex-start;
-		justify-items: center;
-		color: $t2;
+  .info {
+    overflow: hidden;
+    padding: $space;
+    flex-grow: 1;
+    display: grid;
+    gap: $space;
+    margin-top: $space;
+    background-color: $c2;
+    grid-template-columns: 1fr 1fr;
+    align-content: flex-start;
+    justify-items: center;
+    color: $t2;
 
-		h3 {
-			color: $t3;
-		}
+    h3 {
+      color: $t3;
+    }
 
-		.stack-title {
-			width: 100%;
-			text-align: center;
-			transition-delay: 0.1s;
-		}
-		.stack-list {
-			transition-delay: 0.2s;
-		}
-		.stack-list, .rand-list {
-			width: 100%;
-			display: flex;
-			gap: 0.5 * $space;
-			flex-direction: column;
-			align-self: center;
-			li {
-				width: 100%;
-				display: flex;
-				justify-content: space-between;
-			}
-		}
+    .stack-title {
+      width: 100%;
+      text-align: center;
+      transition-delay: 0.1s;
+    }
+    .stack-list {
+      transition-delay: 0.2s;
+    }
+    .stack-list,
+    .rand-list {
+      width: 100%;
+      display: flex;
+      gap: 0.5 * $space;
+      flex-direction: column;
+      align-self: center;
+      li {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
 
-		
-		.difficulty-title {
-			width: 100%;
-			text-align: center;
-			transition-delay: 0.1s;
-		}
-		
-		.difficulty {
-			grid-column: 1;
-			grid-row: 2;
-			transition-delay: 0.2s;
-		}
+    .difficulty-title {
+      width: 100%;
+      text-align: center;
+      transition-delay: 0.1s;
+    }
 
-		.random {
-			transition-delay: 0.3s;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			gap: $space;
-			width: 100%;
-			grid-column: span 2;
+    .difficulty {
+      grid-column: 1;
+      grid-row: 2;
+      transition-delay: 0.2s;
+    }
 
-		}
+    .random {
+      transition-delay: 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: $space;
+      width: 100%;
+      grid-column: span 2;
+    }
 
-		.percentage {
-			width: 100%;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
+    .percentage {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-			.round {
-				transform: rotate(-90deg);
-				transition: all 1s ease-in-out 0.3s;
+      .round {
+        transform: rotate(-90deg);
+        transition: all 1s ease-in-out 0.3s;
 
-				/* SVG */
-				fill: $c3;
-				stroke: $t2;
-				stroke-width: 8;
-				stroke-linecap: round;
-				stroke-dasharray: 0 999;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-			}
+        /* SVG */
+        fill: $c3;
+        stroke: $t2;
+        stroke-width: 8;
+        stroke-linecap: round;
+        stroke-dasharray: 0 999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-			span {
-				color: $t3;
-				font-size: 1.1 * $space;
-				font-weight: bold;
-				position: absolute;
-			}
-		}
-	}
+      span {
+        color: $t3;
+        font-size: 1.1 * $space;
+        font-weight: bold;
+        position: absolute;
+      }
+    }
+  }
 }
 
 .hidden {
-	opacity: 0;
-	filter: blur(5px);
-	transition: filter 0.2s ease-in, opacity 0.4s linear;
-	.float-right {
-		transform: translateX(-150%);
-		transition: transform 0.5s ease-in;
-	}
+  opacity: 0;
+  filter: blur(5px);
+  transition: filter 0.2s ease-in, opacity 0.4s linear;
+  .float-right {
+    transform: translateX(-150%);
+    transition: transform 0.5s ease-in;
+  }
 
-	.float-left {
-		transform: translateX(150%);
-		transition: transform 0.5s ease-in;
-	}
+  .float-left {
+    transform: translateX(150%);
+    transition: transform 0.5s ease-in;
+  }
 
-	.float-up {
-		transform: translateY(150%);
-		transition: transform 0.5s ease-in;
-	}
+  .float-up {
+    transform: translateY(150%);
+    transition: transform 0.5s ease-in;
+  }
 }
 
 .shown {
-	opacity: 1;
-	filter: blur(0);
-	.float-left,
-	.float-right,
-	.float-up {
-		transform: translateX(0%);
-		transform: translateY(0%);
+  opacity: 1;
+  filter: blur(0);
+  .float-left,
+  .float-right,
+  .float-up {
+    transform: translateX(0%);
+    transform: translateY(0%);
+  }
+}
+
+@media screen and (min-width: 450px) {
+  body {
+    background-color: $c2;
+    max-width: 1216px;
+    max-height: 1088px;
+    margin: 0 auto;
+    // padding: 2 * $space;
+    display: grid;
+    grid-template-columns: repeat(38, 32px);
+	grid-template-rows: repeat(34,32px);
+    // gap: 0 3 * $space;
+	align-items: flex-start;
+    overflow: hidden;
+  }
+
+  header {
+	grid-area: 2 / 15 / 10 / -2 ;
+    width: 100%;
+	height: 100%;
+    aspect-ratio: 24/9;
+    background-image: url("myndir/forsida/landslag.jpg");
+    background-size: cover;
+
+    .hero {
+      height: 100%;
+      img {
+        display: none;
+      }
+    }
+
+    nav {
+      display: none;
+    }
+  }
+
+  #project-container {
+    background-color: $c1;
+	grid-area: 2 / 2 / span 20 / span 11;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+      display: none; /* Safari and Chrome */
+    }
+
+    scroll-snap-type: y mandatory;
+    height: 640px;
+
+    .proj {
+      height: 40 * $space;
+      margin-bottom: 10 * $space;
+      scroll-snap-align: start;
+      align-items: space-between;
+
+      .content {
+        flex-grow: 1;
+        aspect-ratio: 0;
+      }
+
+      .fancy-link {
+        font-size: 1.5 * $space;
+        padding: 0.5 * $space;
+      }
+    }
+  }
+
+  .overview {
+    background-color: $c1;
+    margin: 0;
+	height: 100%;
+	grid-area: 24 / 2 / span 10 / span 11;
+	
+	h1 {
+		margin: 0;
+		margin-bottom: 0.5 * $space;
 	}
+
+	ul {
+		gap: 0.5 * $space;
+
+		.fancy-link {
+			padding: 0.25 * $space 0;
+		}
+	}
+  }
+  .arrows {
+    display: none;
+  }
+
+  footer {
+	background-color: $c1;
+	width: 100%;
+	height: 100%;
+	grid-area: 31 / 15 / span 3 / -2;
+	padding: $space;
+
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	img {
+		cursor: pointer;
+	}	
+  }
+
+  main {
+	background-color: $c1;
+	grid-area: 12 / 15 / span 17 / -2;
+	width: 100%;
+	height: 100%;
+  }
 }

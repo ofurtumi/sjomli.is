@@ -30,7 +30,6 @@ li {
 
 header {
   scroll-snap-align: center;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -87,8 +86,8 @@ header .hero div {
   padding: 1rem;
 }
 header .hero div:before {
-  background-image: linear-gradient(45deg, #75715e, #1e1f1c);
-  opacity: 50%;
+  background: #1e1f1c;
+  opacity: 75%;
   position: absolute;
   content: "";
   inset: 1rem;
@@ -103,50 +102,55 @@ header .hero div h2 {
 header .hero div h2 {
   font-size: 1.5rem;
 }
-header .overview {
+
+.overview {
   margin: 1rem;
   padding: 1rem;
   background: #1e1f1c;
   border-radius: 0px;
 }
-header .overview * {
+.overview * {
   color: #75715e;
 }
-header .overview h1 {
+.overview h1 {
   margin: 0.5rem 0;
   font-size: 1.2rem;
   border-bottom: 2px solid;
 }
-header .overview ul {
+.overview ul {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
 }
-header .arrows {
+
+.arrows {
   display: flex;
   justify-content: center;
 }
-header .arrows svg {
+.arrows svg {
   cursor: pointer;
   stroke: #34352f;
   transition: 0.2s;
 }
-header .arrows svg:hover path {
+.arrows svg:hover path {
   transform: translateY(0.5rem);
 }
-header .arrows path {
+.arrows path {
   transition: 0.2s ease-in-out;
 }
-header .arrows path:nth-child(2) {
+.arrows path:nth-child(2) {
   transition-delay: 0.1s;
 }
 
 .fancy-link {
   padding: 0.2rem;
-  background-image: linear-gradient(90deg, #272822, #272822 50%, rgba(0, 0, 0, 0) 0);
+  background-image: linear-gradient(90deg, #34352f, #34352f 50%, rgba(0, 0, 0, 0) 0);
   background-size: 300%;
   background-position: 100%;
   transition: background-position 0.6s ease-out;
+}
+.fancy-link.dark-bg {
+  background-image: linear-gradient(90deg, #272822, #272822 50%, rgba(0, 0, 0, 0) 0);
 }
 
 .fancy-link:hover {
@@ -232,14 +236,16 @@ header .arrows path:nth-child(2) {
 .proj .info .stack-list {
   transition-delay: 0.2s;
 }
-.proj .info .stack-list, .proj .info .rand-list {
+.proj .info .stack-list,
+.proj .info .rand-list {
   width: 100%;
   display: flex;
   gap: 0.5rem;
   flex-direction: column;
   align-self: center;
 }
-.proj .info .stack-list li, .proj .info .rand-list li {
+.proj .info .stack-list li,
+.proj .info .rand-list li {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -317,6 +323,101 @@ header .arrows path:nth-child(2) {
 .shown .float-up {
   transform: translateX(0%);
   transform: translateY(0%);
+}
+
+@media screen and (min-width: 450px) {
+  body {
+    background-color: #1e1f1c;
+    max-width: 1216px;
+    max-height: 1088px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(38, 32px);
+    grid-template-rows: repeat(34, 32px);
+    align-items: flex-start;
+    overflow: hidden;
+  }
+  header {
+    grid-area: 2/15/10/-2;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 24/9;
+    background-image: url("myndir/forsida/landslag.jpg");
+    background-size: cover;
+  }
+  header .hero {
+    height: 100%;
+  }
+  header .hero img {
+    display: none;
+  }
+  header nav {
+    display: none;
+  }
+  #project-container {
+    background-color: #272822;
+    grid-area: 2/2/span 20/span 11;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    height: 640px;
+  }
+  #project-container::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+  #project-container .proj {
+    height: 40rem;
+    margin-bottom: 10rem;
+    scroll-snap-align: start;
+    align-items: space-between;
+  }
+  #project-container .proj .content {
+    flex-grow: 1;
+    aspect-ratio: 0;
+  }
+  #project-container .proj .fancy-link {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+  .overview {
+    background-color: #272822;
+    margin: 0;
+    height: 100%;
+    grid-area: 24/2/span 10/span 11;
+  }
+  .overview h1 {
+    margin: 0;
+    margin-bottom: 0.5rem;
+  }
+  .overview ul {
+    gap: 0.5rem;
+  }
+  .overview ul .fancy-link {
+    padding: 0.25rem 0;
+  }
+  .arrows {
+    display: none;
+  }
+  footer {
+    background-color: #272822;
+    width: 100%;
+    height: 100%;
+    grid-area: 31/15/span 3/-2;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  footer img {
+    cursor: pointer;
+  }
+  main {
+    background-color: #272822;
+    grid-area: 12/15/span 17/-2;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

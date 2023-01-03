@@ -23,8 +23,18 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 document.querySelector('#arrow-svg').addEventListener('click', () => {
-	document.querySelector('main').scrollIntoView();
+	document.querySelector('#bannad').scrollIntoView();
 });
+
+let test = document.querySelector('.overview').querySelectorAll('a')
+test.forEach(a => {
+	a.addEventListener('click', (e) => {
+		e.preventDefault();
+		let target = a.getAttribute('href')
+		// console.log('target --> ', target)
+		document.querySelector(target).scrollIntoView()
+	})
+})
 
 function percentCircle(container) {
 	let round = container.querySelector('.round');
