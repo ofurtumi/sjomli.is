@@ -31,7 +31,6 @@ test.forEach(a => {
 	a.addEventListener('click', (e) => {
 		e.preventDefault();
 		let target = a.getAttribute('href')
-		// console.log('target --> ', target)
 		document.querySelector(target).scrollIntoView()
 	})
 })
@@ -56,3 +55,9 @@ const hiddens = document.querySelectorAll('.hidden');
 hiddens.forEach((element) => {
 	observer.observe(element);
 });
+
+window.onload = async (e) => {
+	await new Promise(r => setTimeout(r, 1000));
+	document.querySelector('body').classList.remove('asdf')
+
+}
