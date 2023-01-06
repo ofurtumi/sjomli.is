@@ -33,7 +33,7 @@ body {
 	&.asdf {
 		filter: blur(2 * $space);
 	}
-	
+
 	&.asdf::before {
 		position: absolute;
 		background-color: $c1;
@@ -407,21 +407,20 @@ header {
 	}
 }
 
-footer, main {
+footer,
+main {
 	display: none;
 }
 
-@media screen and (min-width: 450px) {
+@media (min-width: 1200px) {
 	body {
 		background-color: $c2;
 		max-width: 1216px;
 		max-height: 1088px;
 		margin: 0 auto;
-		// padding: 2 * $space;
 		display: grid;
 		grid-template-columns: repeat(38, 1fr);
 		grid-template-rows: repeat(34, 1fr);
-		// gap: 0 3 * $space;
 		align-items: flex-start;
 		overflow: hidden;
 	}
@@ -447,40 +446,54 @@ footer, main {
 	}
 
 	main {
+		display: block;
 		background-color: $c1;
-		grid-area: 12 / 15 / span 17 / -2;
+		grid-area: 11 / 27 / span 18 / -2;
 		width: 100%;
 		height: 100%;
 	}
 
 	#project-container {
 		background-color: $c1;
-		grid-area: 2 / 2 / span 20 / span 11;
+		grid-area: 2 / 2 / span 27 / span 12;
+
+		@media (max-height: 835px) {
+			grid-area: 2 / 2 / span 32 / span 12;
+		}
+
 		overflow-y: scroll;
 		scrollbar-width: none; /* Firefox */
 		scroll-behavior: smooth;
+		height: 0px;
+		height: 100%;
+		scroll-snap-type: y mandatory;
 
 		&::-webkit-scrollbar {
 			display: none; /* Safari and Chrome */
 		}
 
-		scroll-snap-type: y mandatory;
-		height: 640px;
-
 		.proj {
-			height: 40 * $space;
-			margin-bottom: 10 * $space;
+			height: 45 * $space;
+			margin-bottom: 20 * $space;
 			scroll-snap-align: start;
 			align-items: space-between;
 
 			.content {
-				flex-grow: 1;
-				aspect-ratio: 0;
+				aspect-ratio: 0;	
 			}
 
 			.fancy-link {
+				flex-grow: 0;
 				font-size: 1.5 * $space;
 				padding: 0.5 * $space;
+			}
+
+			.foot {
+				flex-grow: 0;
+			}
+
+			.info {
+				flex-grow: 0;
 			}
 		}
 	}
@@ -489,7 +502,7 @@ footer, main {
 		background-color: $c1;
 		margin: 0;
 		height: 100%;
-		grid-area: 24 / 2 / span 10 / span 11;
+		grid-area: 11 / 15 / span 18 / span 11;
 
 		h1 {
 			margin: 0;
@@ -512,7 +525,12 @@ footer, main {
 		background-color: $c1;
 		width: 100%;
 		height: 100%;
-		grid-area: 31 / 15 / span 3 / -2;
+		grid-area: 30 / 2 / span 4 / -2;
+		
+		@media (max-height: 835px) {
+			grid-area: 30 / 15 / span 4 / -2;
+			
+		}
 		padding: $space;
 
 		display: flex;
@@ -522,5 +540,31 @@ footer, main {
 		img {
 			cursor: pointer;
 		}
+	}
+}
+
+@media (min-height: 1088px) {
+	main {
+		grid-area: 12 / 15 / span 17 / -2;
+	}
+
+	#project-container {
+		grid-area: 2 / 2 / span 20 / span 11;
+		height: 640px;
+		.proj {
+			height: 40 * $space;
+			.content {
+				flex-grow: 1;
+				aspect-ratio: 0;
+			}
+		}
+	}
+
+	.overview {
+		grid-area: 24 / 2 / span 10 / span 11;
+	}
+
+	footer {
+		grid-area: 31 / 15 / span 3 / -2;
 	}
 }
