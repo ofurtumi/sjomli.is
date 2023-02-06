@@ -229,17 +229,21 @@ function CPT(data) {
 			.appendChild(newProject(template, current));
 
 		// todo: bæta þessu við þegar komið inn fyrir öll verkefni
-		  document
-		    .querySelector(".overview ul")
-		    .appendChild(
-		      CBN("li", {}, [
-		        CLN(
-		          "a",
-		          { class: ["fancy-link"], href: `#${current.link[0]}` },
-		          current.link[1]
-		        ),
-		      ])
-		    );
+		document
+			.querySelector(".overview ul")
+			.appendChild(
+				CBN("li", {}, [
+					CBN(
+						"a",
+						{ class: ["fancy-link"], href: `#${current.link[0]}` },
+						[
+							CLN("img", {
+								src: `myndir/icons/${current.link[0]}.svg`,
+							}),
+						]
+					),
+				])
+			);
 	});
 }
 

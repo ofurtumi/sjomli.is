@@ -446,11 +446,28 @@ main {
 	}
 
 	main {
-		display: block;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5 * $space;
 		background-color: $c1;
 		grid-area: 11 / 27 / span 18 / -2;
 		width: 100%;
 		height: 100%;
+		padding: 1 * $space;
+		p {
+			color: $t3;
+			line-height: 1.4 * $space;
+		}
+		a {
+			color: $t2;
+			text-decoration: underline $c3;
+
+			transition: text-decoration-color 0.2s ease;
+
+			&:hover {
+				text-decoration-color: $t2;
+			}
+		}
 	}
 
 	#project-container {
@@ -479,7 +496,7 @@ main {
 			align-items: space-between;
 
 			.content {
-				aspect-ratio: 0;	
+				aspect-ratio: 0;
 			}
 
 			.fancy-link {
@@ -499,6 +516,8 @@ main {
 	}
 
 	.overview {
+		display: flex;
+		flex-direction: column;
 		background-color: $c1;
 		margin: 0;
 		height: 100%;
@@ -510,10 +529,19 @@ main {
 		}
 
 		ul {
-			gap: 0.5 * $space;
-
+			height: 100%;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			justify-items: center;
+			align-items: center;
+			gap: 1 * $space;
 			.fancy-link {
-				padding: 0.25 * $space 0;
+				max-width: 75px;
+				border: 2px solid $t2;
+				border-radius: 10px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
 			}
 		}
 	}
@@ -526,10 +554,9 @@ main {
 		width: 100%;
 		height: 100%;
 		grid-area: 30 / 2 / span 4 / -2;
-		
+
 		@media (max-height: 835px) {
 			grid-area: 30 / 15 / span 4 / -2;
-			
 		}
 		padding: $space;
 
@@ -562,6 +589,15 @@ main {
 
 	.overview {
 		grid-area: 24 / 2 / span 10 / span 11;
+
+		ul {
+			height: 100%;
+			grid-template-columns: 1fr 1fr 1fr;
+
+			.fancy-link {
+				max-width: 75px;
+			}
+		}
 	}
 
 	footer {
