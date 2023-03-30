@@ -1,93 +1,109 @@
 <!DOCTYPE html>
 <html lang="is">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>sjomli.is</title>
+		<link rel="stylesheet" href="main.css" />
+		<script defer src="index.js"></script>
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sjomli.is</title>
-    <!-- <link rel="stylesheet" href="../globals.css"> -->
-    <!-- <link rel="stylesheet" href="../global-header.css"> -->
-    <link rel="stylesheet" href="main.css">
-    <script defer src="index.js"></script>
-</head>
-
-<body class="asdf fdsa">
-    <header>
-        <nav>
-            <button>!</button>
-            <button>?</button>
-        </nav>
-        <div class="hero">
-            <img src="myndir/forsida/landslag.jpg" alt="">
-            <div>
-                <h1>
-                    góðan og blessaðan
-                </h1>
-                <h2>
-                    ég heiti Tumi
-                </h2>
-            </div>
-        </div>
-    </header>
-    <main>
-        <p>halló halló ég er 21 árs að læra tölvunarfræði með fókus á framendaforritun</p>
-        <p>ég hef unnið í nokkrum fullstack verkefnum, bæði <a href="https://hannesarholt.is" target="_blank">einn</a> og með <a href="https://nord.is" target="_blank">með teymi</a></p>
-        <p>mér finnst gaman að birta það sem ég er að vinna í og hef mikið dálæti af því að búa til sýnidæmi og kennsluefni</p>
-        <p>ég hef ágætis reynslu í mörgum tungumálum, þar má nefna C, C++, java, javascrpt / typescript, rust, python, R, morpho og haskell</p>
-        <p>áhugasamir geta fundið ferilskránna mína <a href="ferilskra.pdf">hér</a></p>
-    </main>
-    <div class="overview">
-        <h1>yfirlit verkefna</h1>
-        <ul>
-        </ul>
-    </div>
-    <div class="arrows">
-        <svg id="arrow-svg" width="80" fill="none" stroke-width="5px">
-            <path d="M5  5 L40 30 L75  5" />
-            <path d="M5 25 L40 50 L75 25" />
-            Sorry, your browser does not support inline SVG.
-        </svg>
-    </div>
-    <div id="project-container">
-
-    </div>
-    <footer>
-    </footer>
-    <template id="project-template">
-        <section id="bannad" class="proj">
-            <div class="content hidden">
-                <h2 id="project-name" class="project-name float-right"></h2>
-                <p id="project-description" class="description float-left"></p>
-                <a id="project-link" href="/bannad" class="fancy-link dark-bg float-right">opna verkefni</a>
-                <div class="foot float-left">
-                    <p id="project-date">apríl 2020</p>
-                    <a id="project-github">github</a>
-                </div>
-            </div>
-            <div class="info hidden">
-                <h3 class="difficulty-title float-right">erfiðleiki</h3>
-                <div class="float-right difficulty percentage">
-                    <svg id="project-percent" class="round" width="100" height="100">
-                        <circle cx="50" cy="50" r="40" />
-                    </svg>
-                    <span id="project-num" class="per-num"></span>
-                </div>
-                <h3 class="stack-title float-left">stack</h3>
-                <ul class="stack-list float-left">
-                </ul>
-                <div class="random float-up">
-                    <h3>athugaverðar tölur</h3>
-                    <ul class="rand-list">
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </template>
-    <template id="list-item">
-        <li><span>CSS</span><span>75%</span></li>
-    </template>
-    <script src="setup.js"></script>
-</body>
-
+	<body class="asdf fdsa">
+		<header>
+			<nav>
+				<a href="ferilskra.pdf">ferilskrá</a>
+				<a href="https://github.com/ofurtumi">github</a>
+				<a href="https://twitter.com/tumi_tigur">twitter</a>
+			</nav>
+			<div class="hero">
+				<img src="myndir/forsida/landslag.jpg" alt="" />
+				<div>
+					<h1>góðan og blessaðan</h1>
+					<h2>ég heiti Tumi</h2>
+				</div>
+			</div>
+		</header>
+		<main>
+			<p>
+				halló halló ég er 21 árs að læra tölvunarfræði með fókus á
+				framendaforritun
+			</p>
+			<p>
+				ég hef unnið í nokkrum fullstack verkefnum, bæði
+				<a href="https://hannesarholt.is" target="_blank">einn</a> og
+				með <a href="https://nord.is" target="_blank">með teymi</a>
+			</p>
+			<p>
+				mér finnst gaman að birta það sem ég er að vinna í og hef mikið
+				dálæti af því að búa til sýnidæmi og kennsluefni
+			</p>
+			<p>
+				ég hef ágætis reynslu í mörgum tungumálum, þar má nefna C, C++,
+				java, javascrpt / typescript, rust, python, R, morpho og haskell
+			</p>
+			<p>
+				áhugasamir geta fundið ferilskránna mína
+				<a href="ferilskra.pdf">hér</a>
+			</p>
+		</main>
+		<div class="overview">
+			<h1>yfirlit verkefna</h1>
+			<ul></ul>
+		</div>
+		<div class="arrows">
+			<svg id="arrow-svg" width="80" fill="none" stroke-width="5px">
+				<path d="M5  5 L40 30 L75  5" />
+				<path d="M5 25 L40 50 L75 25" />
+				Sorry, your browser does not support inline SVG.
+			</svg>
+		</div>
+		<div id="project-container"></div>
+		<footer></footer>
+		<template id="project-template">
+			<section id="bannad" class="proj">
+				<div class="content hidden">
+					<h2 id="project-name" class="project-name float-right"></h2>
+					<p
+						id="project-description"
+						class="description float-left"
+					></p>
+					<a
+						id="project-link"
+						href="/bannad"
+						class="fancy-link dark-bg float-right"
+						>opna verkefni</a
+					>
+					<div class="foot float-left">
+						<p id="project-date">apríl 2020</p>
+						<a id="project-github">github</a>
+					</div>
+				</div>
+				<div class="info hidden">
+					<h3 class="difficulty-title float-right">erfiðleiki</h3>
+					<div class="float-right difficulty percentage">
+						<svg
+							id="project-percent"
+							class="round"
+							width="100"
+							height="100"
+						>
+							<circle cx="50" cy="50" r="40" />
+						</svg>
+						<span id="project-num" class="per-num"></span>
+					</div>
+					<h3 class="stack-title float-left">stack</h3>
+					<ul class="stack-list float-left"></ul>
+					<div class="random float-up">
+						<h3>athugaverðar tölur</h3>
+						<ul class="rand-list"></ul>
+					</div>
+				</div>
+			</section>
+		</template>
+		<template id="list-item">
+			<li><span>CSS</span><span>75%</span></li>
+		</template>
+		<script src="setup.js"></script>
+	</body>
 </html>
