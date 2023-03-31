@@ -1,9 +1,13 @@
 body {
 	padding: 2rem 0;
 	max-width: 1200px;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	display: flex;
+	flex-direction: column;
+	/*display: grid;
+	grid-template-columns: 1fr 1fr 1fr;*/
+
 	min-height: 100vh;
+	padding: 1rem;
 	margin: 0 auto;
 	justify-content: center;
 	gap: 1rem;
@@ -19,4 +23,13 @@ section {
 	background-color: lightgray;
 	border-radius: 5px;
 	padding: 1em;
+}
+
+@media (min-width: 1000px) {
+	body {
+		/*display: flex;
+    flex-direction: column;*/
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
 }
