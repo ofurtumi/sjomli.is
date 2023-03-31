@@ -1,0 +1,22 @@
+body {
+	padding: 2rem 0;
+	max-width: 1200px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	min-height: 100vh;
+	margin: 0 auto;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.waiting {
+	justify-self: center;
+	grid-column: span 5;
+}
+
+section {
+	overflow: scroll;
+	background-color: lightgray;
+	border-radius: 5px;
+	padding: 1em;
+}
