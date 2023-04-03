@@ -30,4 +30,9 @@ async function main() {
 	main.innerHTML = html_string;
 }
 
-main();
+// main();
+
+window.onload = function () {
+	// similar behavior as clicking on a link
+	window.location.href = "https://highscore.sjomli.is";
+};
