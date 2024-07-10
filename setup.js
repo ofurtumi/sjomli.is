@@ -229,21 +229,19 @@ function CPT(data) {
 			.appendChild(newProject(template, current));
 
 		// todo: bæta þessu við þegar komið inn fyrir öll verkefni
-		document
-			.querySelector(".overview ul")
-			.appendChild(
-				CBN("li", {}, [
-					CBN(
-						"a",
-						{ class: ["fancy-link"], href: `#${current.link[0]}` },
-						[
-							CLN("img", {
-								src: `myndir/icons/${current.link[0]}.svg`,
-							}),
-						]
-					),
-				])
-			);
+		document.querySelector(".overview ul").appendChild(
+			CBN("li", {}, [
+				CBN(
+					"a",
+					{ class: ["fancy-link"], href: `#${current.link[0]}` },
+					[
+						CLN("img", {
+							src: `myndir/icons/${current.link[0]}.svg`,
+						}),
+					],
+				),
+			]),
+		);
 	});
 }
 
@@ -268,9 +266,21 @@ function CCL(data) {
 	});
 }
 
+const update_age = () => {
+	const now = new Date();
+	const birth = new Date("2001-09-06");
+	document.querySelector("#age").textContent =
+		now.getFullYear() -
+		birth.getFullYear() -
+		(now.getMonth() >= birth.getMonth() && now.getDate() >= birth.getDate()
+			? 0
+			: 1);
+};
+
 function init() {
 	CPT(projectData);
 	CCL(contactData);
+	update_age();
 }
 
 init();
