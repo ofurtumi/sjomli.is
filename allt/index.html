@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="is">
+	<body>
+		<ul id="routes"></ul>
+	</body>
+	<script>
+		const routes = [
+			"IKP",
+			"allt",
+			"appelsinugula",
+			"bannad",
+			"catan",
+			"fpc",
+			"highscore",
+			"",
+			"labb",
+			"noise-test",
+			"raffle",
+			"test",
+			"tile-editor",
+			"trig-vis",
+			"um",
+			"wfc",
+		];
+
+		const list = document.getElementById("routes");
+		for (const route of routes) {
+			const item = document.createElement("li");
+			const link = document.createElement("a");
+			const href = "/" + route + "/index.html";
+			link.href = href;
+			link.textContent = href;
+			item.appendChild(link);
+			list.appendChild(item);
+		}
+	</script>
+</html>
